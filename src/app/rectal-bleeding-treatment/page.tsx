@@ -3,26 +3,35 @@
 import BariatricBanner from '@/components/BreadcrumbBanner';
 import FaqSection from '@/components/FaqSection';
 import { Container, Row, Col } from 'react-bootstrap';
-import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Rectal Bleeding - Causes & Treatment | Bangalore",
+  title: 'Rectal Bleeding Treatment in Bangalore – Dr. Shabeer Ahmed',
+  description:
+    'Consult Dr. Shabeer Ahmed for expert diagnosis and advanced treatment of rectal bleeding in Bangalore. Specialized care for piles, fissures, and colorectal issues.',
+  keywords:
+    'Rectal Bleeding Treatment Bangalore, Piles Specialist, Fissure Treatment Bangalore, Colorectal Surgeon, Dr Shabeer Ahmed',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/rectal-bleeding-treatment',
+  },
+  openGraph: {
+    title: 'Rectal Bleeding Treatment in Bangalore – Dr. Shabeer Ahmed',
     description:
-        "Understand the acute and chronic causes of rectal bleeding including hemorrhoids, anal fissures, colorectal cancer, IBD, and more. Learn when to seek medical attention.",
-    keywords:
-        "rectal bleeding, moolshoola, causes of rectal bleeding, hemorrhoids treatment, anal fissure surgery, colorectal cancer, IBD, Bangalore"
+      'Consult Dr. Shabeer Ahmed for expert diagnosis and advanced treatment of rectal bleeding in Bangalore. Specialized care for piles, fissures, and colorectal issues.',
+    url: 'https://www.drshabeerahmed.in/rectal-bleeding-treatment',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 
 export default function RectalBleedingPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
-
+           
             {/* Banner Section */}
             <BariatricBanner
                 title="Rectal Bleeding"

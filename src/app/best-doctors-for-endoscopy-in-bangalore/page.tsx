@@ -7,21 +7,30 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Gallstones - Causes, Symptoms & Treatment | Bangalore",
+  title: 'Best Endoscopy Specialists in Bangalore – Dr Shabeer Ahmed.',
+  description:
+    'Discover Bangalore’s leading endoscopy experts at Dr Shabeer Ahmed’s clinic – skilled in advanced GI diagnostics, patient care, and minimally invasive procedures.',
+  keywords: 'Best Endoscopy Specialists in Bangalore',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/best-doctors-for-endoscopy-in-bangalore',
+  },
+  openGraph: {
+    title: 'Best Endoscopy Specialists in Bangalore – Dr Shabeer Ahmed.',
     description:
-        "Learn about Gallstones causes, symptoms, risk factors and treatment options like Laparoscopic Cholecystectomy and ERCP.",
-    keywords:
-        "gallstones, gallbladder stones, laparoscopic cholecystectomy, ERCP, gallstone treatment in bangalore"
+      'Discover Bangalore’s leading endoscopy experts at Dr Shabeer Ahmed’s clinic – skilled in advanced GI diagnostics, patient care, and minimally invasive procedures.',
+    url: 'https://www.drshabeerahmed.in/best-doctors-for-endoscopy-in-bangalore',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function EndoscopicPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+            
 
             {/* Banner Section */}
             <BariatricBanner

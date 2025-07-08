@@ -1,16 +1,34 @@
 import BariatricBanner from '@/components/BreadcrumbBanner';
 import FaqSection from '@/components/FaqSection';
-import Head from 'next/head';
-import Image from 'next/image';
+
+
+export const metadata = {
+  title: 'Expert Abdominal Pain & Hernia Specialist in Bangalore, Dr. Ahmed',
+  description:
+    'Dr. Shabeer Ahmed provides expert diagnosis and minimally invasive treatment for abdominal pain, hernias, reflux, and IBS with compassionate, trusted care.',
+  keywords:
+    'Hernia Specialist in Bangalore, Abdominal Pain Treatment Bangalore, Minimally Invasive Surgery, Dr. Shabeer Ahmed, IBS, Reflux Specialist',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/abdominal',
+  },
+  openGraph: {
+    title: 'Expert Abdominal Pain & Hernia Specialist in Bangalore, Dr. Ahmed',
+    description:
+      'Dr. Shabeer Ahmed provides expert diagnosis and minimally invasive treatment for abdominal pain, hernias, reflux, and IBS with compassionate, trusted care.',
+    url: 'https://www.drshabeerahmed.in/abdominal',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 
 export default function Abdominal() {
     return (
         <>
-            <Head>
-                <title>Abdominal pain/ acute and Chronic</title>
-                <meta name="description" content="Details about Bariatric Surgery types, advantages, and procedures." />
-            </Head>
-
+           
             <BariatricBanner title="Abdominal pain/ acute and Chronic" imageSrc="/img/bannerslider/Abdominal Pain 2.webp" />
 
             <div className="content">

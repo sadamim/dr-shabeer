@@ -3,26 +3,35 @@
 import BariatricBanner from '@/components/BreadcrumbBanner';
 import FaqSection from '@/components/FaqSection';
 import { Container, Row, Col } from 'react-bootstrap';
-import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Bariatric Surgery - Types, Benefits & Procedures | Bangalore",
+  title: 'Dr. Shabeer Ahmed – Bariatric Surgery Specialist in Bangalore',
+  description:
+    'Get expert care from Dr. Shabeer Ahmed, top Bariatric Surgery Specialist in Bangalore, offering advanced weight loss procedures with trusted surgical expertise.',
+  keywords:
+    'Bariatric Surgery Specialist in Bangalore, Weight Loss Surgeon, Obesity Treatment Bangalore, Laparoscopic Bariatric Surgery',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/bariatric-surgery-specialist-bangalore',
+  },
+  openGraph: {
+    title: 'Dr. Shabeer Ahmed – Bariatric Surgery Specialist in Bangalore',
     description:
-        "Know about different types of bariatric surgery like gastric bypass, sleeve gastrectomy, and mini gastric bypass. Learn how it helps in weight loss and improves health.",
-    keywords:
-        "bariatric surgery, gastric bypass, sleeve gastrectomy, weight loss surgery, obesity treatment, Bangalore"
+      'Get expert care from Dr. Shabeer Ahmed, top Bariatric Surgery Specialist in Bangalore, offering advanced weight loss procedures with trusted surgical expertise.',
+    url: 'https://www.drshabeerahmed.in/bariatric-surgery-specialist-bangalore',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 
 export default function BariatricSurgery() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
-
+           
             {/* Banner Section */}
             <BariatricBanner
                 title="Bariatric Surgery"

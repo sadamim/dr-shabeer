@@ -1,8 +1,19 @@
-"use client";
 
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
+// SEO metadata for the page
+export const metadata = {
+  title: "Advanced Laparoscopic Specialist in Bangalore – Dr. Shabeer Ahmed",
+  description:
+    "Dr. Shabeer Ahmed is a leading Advanced Laparoscopic Specialist in Bangalore, offering expert care in GI, bariatric, and minimally invasive surgeries.",
+  keywords:
+    "Surgical Gastroenterologist Specialist in Bangalore, Laparoscopic Surgeon in Bangalore, Advanced Laparoscopic Specialist in Bangalore",
+  canonical: "https://www.drshabeerahmed.in/specialities"
+};
+
+// List of specialities
 const specialities = [
   {
     title: "Gut Care",
@@ -29,110 +40,45 @@ const specialities = [
     href: "/proctology-specialist-in-bangalore",
     icon: "/img/icons/Proctology.svg",
   }
-//   {
-//     title: "Liver Care",
-//     href: "/liver-specialist-in-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   },
-//   {
-//     title: "Pancreatic Disorders",
-//     href: "/pancreas-specialist-in-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   },
-//   {
-//     title: "Hernia Treatment",
-//     href: "/hernia-surgeon-in-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   },
-//   {
-//     title: "Endoscopy",
-//     href: "/endoscopy-services-in-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   },
-//   {
-//     title: "Colonoscopy",
-//     href: "/colonoscopy-center-in-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   },
-//   {
-//     title: "Digestive Wellness",
-//     href: "/digestive-wellness-clinic-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   },
-//   {
-//     title: "Gallbladder Surgery",
-//     href: "/gallbladder-surgery-in-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   },
-//   {
-//     title: "Rectal Disorders",
-//     href: "/rectal-disorders-treatment-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   },
-//   {
-//     title: "Obesity Management",
-//     href: "/obesity-treatment-in-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   },
-//   {
-//     title: "Weight Loss Surgery",
-//     href: "/weight-loss-surgeon-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   },
-//   {
-//     title: "IBS Management",
-//     href: "/ibs-treatment-in-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   },
-//   {
-//     title: "GI Cancer Screening",
-//     href: "/gi-cancer-screening-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   },
-//   {
-//     title: "Stomach Disorders",
-//     href: "/stomach-specialist-in-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   },
-//   {
-//     title: "Esophageal Disorders",
-//     href: "/esophagus-specialist-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   },
-//   {
-//     title: "Nutrition & Diet",
-//     href: "/diet-consultation-in-bangalore",
-//     icon: "/img/icons/Gut Care.svg",
-//   }
 ];
 
-
+// Component definition
 export default function AllSpecialitiesPage() {
   return (
-    <section className="all-specialities-page">
-      <div className="container">
-        <div className="text-center mb-5 mt-80">
-          <h1 className="page-title mt-5">All Specialities</h1>
-        </div>
+    <>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <link rel="canonical" href={metadata.canonical} />
+        <meta name="robots" content="index, follow"/>
+      </Head>
 
-        <div className="specialities-grid">
-          {specialities.map((item, index) => (
-            <Link href={item.href} key={index} className="speciality-card">
-              <div className="card-content">
-                <div className="icon-wrapper">
-                  <Image
-                    src={item.icon}
-                    alt={item.title}
-                    width={64}
-                    height={64}
-                  />
+      <section className="all-specialities-page">
+        <div className="container">
+          <div className="text-center mb-5 mt-80">
+            <h1 className="page-title mt-5">All Specialities</h1>
+          </div>
+
+          <div className="specialities-grid">
+            {specialities.map((item, index) => (
+              <Link href={item.href} key={index} className="speciality-card">
+                <div className="card-content">
+                  <div className="icon-wrapper">
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      width={64}
+                      height={64}
+                    />
+                  </div>
+                  <h5 className="title">{item.title}</h5>
                 </div>
-                <h5 className="title">{item.title}</h5>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

@@ -1,6 +1,27 @@
-"use client";
 
 import Image from "next/image";
+
+export const metadata = {
+  title: 'Dr. Shabeer Ahmed | Expert Gut Care at United Gut Healthcare.',
+  description:
+    'Experience expert gut care at United Gut Healthcare with Dr. Shabeer Ahmed, offering advanced treatment for digestive issues and personalized gastrointestinal care.',
+  keywords:
+    'United Gut Healthcare, Dr Shabeer Ahmed Gut Care, Digestive Health Clinic Bangalore, GI Specialist, Gastrointestinal Treatment Bangalore',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/united-gut-healthcare',
+  },
+  openGraph: {
+    title: 'Dr. Shabeer Ahmed | Expert Gut Care at United Gut Healthcare.',
+    description:
+      'Experience expert gut care at United Gut Healthcare with Dr. Shabeer Ahmed, offering advanced treatment for digestive issues and personalized gastrointestinal care.',
+    url: 'https://www.drshabeerahmed.in/united-gut-healthcare',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function IntroducingPage() {
   return (

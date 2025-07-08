@@ -3,25 +3,35 @@
 import BariatricBanner from '@/components/BreadcrumbBanner';
 import FaqSection from '@/components/FaqSection';
 import { Container, Row, Col } from 'react-bootstrap';
-import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Irritable Bowel Syndrome (IBS) - Causes & Treatment | Bangalore",
+  title: 'Irritable Bowel Syndrome | Dr. Shabeer Ahmed',
+  description:
+    'Learn about Irritable Bowel Syndrome (IBS) from Dr. Shabeer Ahmed, a leading gastrointestinal specialist in Bangalore. Get expert care and effective treatment for chronic abdominal discomfort, bloating, and digestive issues.',
+  keywords:
+    'Irritable Bowel Syndrome, IBS Treatment Bangalore, Digestive Disorders, Dr Shabeer Ahmed, Abdominal Pain, Bloating, GI Specialist',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/irritable',
+  },
+  openGraph: {
+    title: 'Irritable Bowel Syndrome | Dr. Shabeer Ahmed',
     description:
-        "Understand Irritable Bowel Syndrome (IBS), its causes, types, symptoms, and treatment options including dietary changes, medications, and lifestyle modifications.",
-    keywords:
-        "ibs, irritable bowel syndrome, ibs treatment in bangalore, low fodmap diet, gut health, digestive issues"
+      'Learn about Irritable Bowel Syndrome (IBS) from Dr. Shabeer Ahmed, a leading gastrointestinal specialist in Bangalore. Get expert care and effective treatment for chronic abdominal discomfort, bloating, and digestive issues.',
+    url: 'https://www.drshabeerahmed.in/irritable',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 
 export default function IBSPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+           
 
             {/* Banner Section */}
             <BariatricBanner

@@ -3,25 +3,35 @@
 import BariatricBanner from '@/components/BreadcrumbBanner';
 import FaqSection from '@/components/FaqSection';
 import { Container, Row, Col } from 'react-bootstrap';
-import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Laparoscopic Surgery - Benefits & Procedures | Bangalore",
+  title: 'Laparoscopic Bariatric Surgeon in Bangalore – Dr. Shabeer Ahmed',
+  description:
+    'Dr. Shabeer Ahmed, expert in laparoscopic bariatric surgery in Bangalore, offers safe weight loss solutions with advanced techniques and personalized patient care.',
+  keywords:
+    'Laparoscopic Bariatric Surgeon in Bangalore, Laparoscopic GI Surgery Bangalore, Weight Loss Surgery Bangalore, Dr. Shabeer Ahmed',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/laparoscopic-surgeon-in-bangalore',
+  },
+  openGraph: {
+    title: 'Laparoscopic Bariatric Surgeon in Bangalore – Dr. Shabeer Ahmed',
     description:
-        "Understand the benefits of laparoscopic surgery including smaller incisions, faster recovery, reduced pain, and precision. Learn about common laparoscopic procedures like gallbladder removal, hernia repair, and more.",
-    keywords:
-        "laparoscopic surgery, minimally invasive surgery, laparoscopy, gallbladder removal, hernia repair, appendectomy, gynecological laparoscopy, bariatric surgery, Bangalore"
+      'Dr. Shabeer Ahmed, expert in laparoscopic bariatric surgery in Bangalore, offers safe weight loss solutions with advanced techniques and personalized patient care.',
+    url: 'https://www.drshabeerahmed.in/laparoscopic-surgeon-in-bangalore',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 
 export default function LaparoscopicPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+           
 
             {/* Banner Section */}
             <BariatricBanner

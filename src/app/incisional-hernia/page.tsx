@@ -3,25 +3,35 @@
 import BariatricBanner from '@/components/BreadcrumbBanner';
 import FaqSection from '@/components/FaqSection';
 import { Container, Row, Col } from 'react-bootstrap';
-import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Incisional Hernia - Causes & Treatment | Bangalore",
+  title: 'Best Hernia Surgeon in Bangalore | Dr. Shabeer Ahmed Expert Care.',
+  description:
+    'Consult Dr. Shabeer Ahmed, the Best Hernia Surgeon in Bangalore, for expert laparoscopic hernia surgery, personalized care, and advanced minimally invasive treatment.',
+  keywords:
+    'Hernia Repair Specialist Bangalore, Hiatal Hernia Surgery Bangalore, Hernia Repair Surgery Bangalore, Best Hernia Surgeon Bangalore',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/incisional-hernia',
+  },
+  openGraph: {
+    title: 'Best Hernia Surgeon in Bangalore | Dr. Shabeer Ahmed Expert Care.',
     description:
-        "Understand what an incisional hernia is, its symptoms, diagnosis, and treatment options like open surgery, laparoscopic repair, and robotic-assisted procedures.",
-    keywords:
-        "incisional hernia, hernia after surgery, hernia treatment in bangalore, laparoscopic hernia repair, robotic hernia surgery"
+      'Consult Dr. Shabeer Ahmed, the Best Hernia Surgeon in Bangalore, for expert laparoscopic hernia surgery, personalized care, and advanced minimally invasive treatment.',
+    url: 'https://www.drshabeerahmed.in/incisional-hernia',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 
 export default function IncisionalHerniaPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+           
 
             {/* Banner Section */}
             <BariatricBanner

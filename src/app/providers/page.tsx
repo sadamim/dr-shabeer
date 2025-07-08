@@ -1,4 +1,4 @@
-"use client";
+
 
 import Image from "next/image";
 import Link from "next/link";
@@ -26,6 +26,28 @@ const items = [
   { img: '/img/icons/Reflux Disease.webp', alt: 'Gastroesophageal Reflux Disease', title: 'Gastroesophageal Reflux Disease', link: 'gastroesophageal' },
   { img: '/img/icons/Laparoscopic.svg', alt: 'Laparoscopic', title: 'Laparoscopic', link: 'laparoscopic-surgeon-in-bangalore' },
 ];
+
+export const metadata = {
+  title: 'Providers – Meet Our Expert Team at United Gut Healthcare.',
+  description:
+    'Explore our expert team of gastrointestinal, bariatric & laparoscopic specialists at United Gut Healthcare. Compassionate care for all your advanced gut health needs.',
+  keywords: 'Providers, Gastrointestinal Specialists, Bariatric Experts, Laparoscopic Surgeons in Bangalore',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/providers',
+  },
+  openGraph: {
+    title: 'Providers – Meet Our Expert Team at United Gut Healthcare.',
+    description:
+      'Explore our expert team of gastrointestinal, bariatric & laparoscopic specialists at United Gut Healthcare. Compassionate care for all your advanced gut health needs.',
+    url: 'https://www.drshabeerahmed.in/providers',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 
 export default function ProvidersPage() {
   return (

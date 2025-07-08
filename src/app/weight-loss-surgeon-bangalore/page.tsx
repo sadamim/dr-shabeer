@@ -7,21 +7,32 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Weight Loss Surgeon - Obesity Treatment | Bangalore",
+  title: 'Weight Loss Surgery Specialist Bangalore – Dr. Shabeer Ahmed.',
+  description:
+    'Consult Dr. Shabeer Ahmed, leading Weight Loss Surgery Specialist in Bangalore, for advanced bariatric procedures and effective long-term weight management solutions.',
+  keywords:
+    'Weight Loss Surgery Bangalore, Weight Loss Surgeon Bangalore, Weight Loss Surgery Specialist Bangalore, Best Surgeon for Weight Loss in Bangalore',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/weight-loss-surgeon-bangalore',
+  },
+  openGraph: {
+    title: 'Weight Loss Surgery Specialist Bangalore – Dr. Shabeer Ahmed.',
     description:
-        "Learn how a weight loss surgeon can help treat obesity through lifestyle, medical, and surgical approaches. Discover the causes of obesity and effective management strategies.",
-    keywords:
-        "weight loss surgeon, obesity treatment, bariatric surgery, causes of obesity, obesity in bangalore, gastric bypass, sleeve gastrectomy"
+      'Consult Dr. Shabeer Ahmed, leading Weight Loss Surgery Specialist in Bangalore, for advanced bariatric procedures and effective long-term weight management solutions.',
+    url: 'https://www.drshabeerahmed.in/weight-loss-surgeon-bangalore',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 
 export default function WeightLossSurgeonPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+          
 
             {/* Banner Section */}
             <BariatricBanner

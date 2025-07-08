@@ -7,21 +7,31 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Surgery for Cancers - Laser Treatment | Bangalore",
+  title: 'Liver Cancer Surgery Specialist in Bangalore | Dr. Shabeer Ahmed.',
+  description:
+    'Consult Dr. Shabeer Ahmed, leading Liver Cancer Surgery Specialist in Bangalore, for advanced surgical care, accurate diagnosis, and personalized treatment plans.',
+  keywords:
+    'Liver Cancer Surgery Specialist in Bangalore, Liver Disease Specialist in Bangalore, Liver Surgery Specialist Bangalore',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/cancer-treatment-in-bangalore',
+  },
+  openGraph: {
+    title: 'Liver Cancer Surgery Specialist in Bangalore | Dr. Shabeer Ahmed.',
     description:
-        "Learn how laser surgery is used to treat various anorectal conditions like hemorrhoids, anal fissures, fistula-in-ano, pilonidal sinus, and more.",
-    keywords:
-        "laser surgery for cancer, laser treatment for anorectal conditions, hemorrhoids treatment, anal fissure laser, fistula treatment in bangalore"
+      'Consult Dr. Shabeer Ahmed, leading Liver Cancer Surgery Specialist in Bangalore, for advanced surgical care, accurate diagnosis, and personalized treatment plans.',
+    url: 'https://www.drshabeerahmed.in/cancer-treatment-in-bangalore',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function SurgeryForCancersPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+           
 
             {/* Banner Section */}
             <BariatricBanner

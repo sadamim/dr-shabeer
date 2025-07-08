@@ -3,25 +3,35 @@
 import BariatricBanner from '@/components/BreadcrumbBanner';
 import FaqSection from '@/components/FaqSection';
 import { Container, Row, Col } from 'react-bootstrap';
-import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Gut Care - Healthy Digestive System Tips | Bangalore",
+  title: 'The Best Gut Health Specialist in Bangalore | Dr. Shabeer Ahmed.',
+  description:
+    'Consult the leading Gut Health Specialist in Bangalore, Dr. Shabeer Ahmed, for expert care in gastrointestinal wellness, digestive issues, and advanced treatments.',
+  keywords:
+    'gut health, gut care, probiotics, prebiotics, digestive health, fiber diet, hydration, Bangalore',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/gut-health-specialis-in-bangalore',
+  },
+  openGraph: {
+    title: 'The Best Gut Health Specialist in Bangalore | Dr. Shabeer Ahmed.',
     description:
-        "Learn how to maintain a healthy digestive system through probiotics, fiber-rich diet, hydration, and stress management.",
-    keywords:
-        "gut health, gut care, probiotics, prebiotics, digestive health, fiber diet, hydration, Bangalore"
+      'Consult the leading Gut Health Specialist in Bangalore, Dr. Shabeer Ahmed, for expert care in gastrointestinal wellness, digestive issues, and advanced treatments.',
+    url: 'https://www.drshabeerahmed.in/gut-health-specialis-in-bangalore',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 
 export default function GutCarePage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+          
 
             {/* Banner Section */}
             <BariatricBanner

@@ -3,25 +3,34 @@
 import BariatricBanner from '@/components/BreadcrumbBanner';
 import FaqSection from '@/components/FaqSection';
 import { Container, Row, Col } from 'react-bootstrap';
-import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Stem Cell Therapy - Regenerative Medicine | Bangalore",
+  title: 'Advanced Stem Cell Therapy in Bangalore – Dr. Shabeer Ahmed.',
+  description:
+    'Explore cutting-edge stem cell therapy with Dr. Shabeer Ahmed in Bangalore for regenerative treatment of gastrointestinal disorders and enhanced healing outcomes.',
+  keywords:
+    'Advanced Stem Cell Therapy in Bangalore, Regenerative Medicine, GI Stem Cell Treatment, Gastrointestinal Healing, Dr. Shabeer Ahmed Stem Cell Therapy',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/stemcell-therapy',
+  },
+  openGraph: {
+    title: 'Advanced Stem Cell Therapy in Bangalore – Dr. Shabeer Ahmed.',
     description:
-        "Discover the benefits of stem cell therapy for conditions like diabetes, orthopedic injuries, neurological disorders, and autoimmune diseases. Learn how it works and who can benefit.",
-    keywords:
-        "stem cell therapy, regenerative medicine, diabetes treatment, arthritis treatment, neurological disorders, autoimmune disease, Bangalore"
+      'Explore cutting-edge stem cell therapy with Dr. Shabeer Ahmed in Bangalore for regenerative treatment of gastrointestinal disorders and enhanced healing outcomes.',
+    url: 'https://www.drshabeerahmed.in/stemcell-therapy',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function StemCellTherapyPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+            
 
             {/* Banner Section */}
             <BariatricBanner

@@ -3,26 +3,35 @@
 import BariatricBanner from '@/components/BreadcrumbBanner';
 import FaqSection from '@/components/FaqSection';
 import { Container, Row, Col } from 'react-bootstrap';
-import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Swallowable Balloon for Weight Loss | Bangalore",
+  title: 'Swallowable Gastric Balloon in Bangalore | Dr Shabeer Ahmed.',
+  description:
+    'Discover the swallowable gastric balloon option for weight loss in Bangalore with Dr Shabeer Ahmed, expert in minimally invasive bariatric treatments.',
+  keywords:
+    'Swallowable Gastric Balloon Bangalore, Non-surgical Weight Loss, Bariatric Treatment Bangalore, Dr Shabeer Ahmed Weight Loss',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/swallowable-balloon',
+  },
+  openGraph: {
+    title: 'Swallowable Gastric Balloon in Bangalore | Dr Shabeer Ahmed.',
     description:
-        "Learn about the swallowable balloon as a non-surgical weight loss option. Discover how it works, its benefits, eligibility, and recovery in Bangalore.",
-    keywords:
-        "swallowable balloon, gastric balloon, non-surgical weight loss, intragastric balloon, obesity treatment, Bangalore"
+      'Discover the swallowable gastric balloon option for weight loss in Bangalore with Dr Shabeer Ahmed, expert in minimally invasive bariatric treatments.',
+    url: 'https://www.drshabeerahmed.in/swallowable-balloon',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 
 export default function SwallowableBalloonPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
-
+           
             {/* Banner Section */}
             <BariatricBanner
                 title="Swallowable Balloon"

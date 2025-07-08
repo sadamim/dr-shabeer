@@ -39,9 +39,9 @@ export default function BariatricBanner({ title = 'Default Title', imageSrc }: B
                             zIndex: 2,
                         }}
                     >
-                        <h2 className="breadcrumb-title text-white fw-bold" style={{ fontSize: '2.5rem' }}>
+                        <h1 className="breadcrumb-title text-white fw-bold" style={{ fontSize: '2.5rem' }}>
                             {title}
-                        </h2>
+                        </h1>
                     </div>
                 </div>
             </div>

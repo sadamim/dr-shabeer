@@ -7,21 +7,31 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Piles Treatment - Causes & Surgery Options | Bangalore",
+  title: 'Piles Treatment in Bangalore | Dr. Shabeer Ahmed – Expert Care',
+  description:
+    'Get advanced piles treatment in Bangalore with Dr. Shabeer Ahmed. Expert in laser & minimally invasive techniques for fast recovery, comfort, and long-term relief.',
+  keywords:
+    'Piles Treatment in Bangalore, Laser Piles Surgery Bangalore, Hemorrhoid Specialist, Dr. Shabeer Ahmed, Minimally Invasive Piles Treatment',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/piles-treatment-in-bangalore',
+  },
+  openGraph: {
+    title: 'Piles Treatment in Bangalore | Dr. Shabeer Ahmed – Expert Care',
     description:
-        "Learn about piles (hemorrhoids) causes, symptoms, and treatment options including lifestyle changes, minimally invasive procedures, and laser surgery.",
-    keywords:
-        "piles treatment, hemorrhoids, piles surgery, laser piles treatment, piles causes, piles symptoms, Bangalore"
+      'Get advanced piles treatment in Bangalore with Dr. Shabeer Ahmed. Expert in laser & minimally invasive techniques for fast recovery, comfort, and long-term relief.',
+    url: 'https://www.drshabeerahmed.in/piles-treatment-in-bangalore',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function PilesTreatmentPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+           
 
             {/* Banner Section */}
             <BariatricBanner

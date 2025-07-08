@@ -3,25 +3,37 @@
 import BariatricBanner from '@/components/BreadcrumbBanner';
 import FaqSection from '@/components/FaqSection';
 import { Container, Row, Col } from 'react-bootstrap';
-import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Laser Surgery for Anorectal Conditions | Bangalore",
+  title: 'Laser Surgery Doctors in Bangalore | Dr. Shabeer Ahmed',
+  description:
+    'Consult top laser surgery doctors in Bangalore, led by Dr. Shabeer Ahmed. Advanced laser treatment options for piles, fissures, fistulas, and other anorectal conditions.',
+  keywords:
+    'Laser Surgery Doctors in Bangalore, Laser Treatment Bangalore, Piles Laser Surgery, Fissure Laser Treatment, Fistula Surgery Bangalore',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/laser-surgery-doctors-in-bangalore',
+  },
+  openGraph: {
+    title: 'Laser Surgery Doctors in Bangalore | Dr. Shabeer Ahmed',
     description:
-        "Learn how laser surgery is used to treat anorectal conditions like hemorrhoids, anal fissures, fistula-in-ano, pilonidal sinus, and more.",
-    keywords:
-        "laser surgery, hemorrhoidoplasty, anal fissure treatment, fistula laser surgery, pilonidal sinus treatment, laser rectal polyps removal, Bangalore"
+      'Consult top laser surgery doctors in Bangalore, led by Dr. Shabeer Ahmed. Advanced laser treatment options for piles, fissures, fistulas, and other anorectal conditions.',
+    url: 'https://www.drshabeerahmed.in/laser-surgery-doctors-in-bangalore',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
+
+
 
 export default function LaserSurgeryPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+           
 
             {/* Banner Section */}
             <BariatricBanner

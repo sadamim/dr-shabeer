@@ -3,26 +3,34 @@
 import BariatricBanner from '@/components/BreadcrumbBanner';
 import FaqSection from '@/components/FaqSection';
 import { Container, Row, Col } from 'react-bootstrap';
-import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Robotic Surgery - Benefits & Applications | Bangalore",
+  title: 'Robotic Surgery | Dr. Shabeer Ahmed – Advanced Precision Care',
+  description:
+    'Explore advanced robotic surgery techniques with Dr. Shabeer Ahmed in Bangalore. Experience precision, faster recovery, and minimally invasive surgical care.',
+  keywords:
+    'Robotic Surgery Bangalore, Minimally Invasive Surgery, Advanced Surgical Techniques, Dr. Shabeer Ahmed Robotic Surgery, Precision Surgery Bangalore',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/robotic-surgeries',
+  },
+  openGraph: {
+    title: 'Robotic Surgery | Dr. Shabeer Ahmed – Advanced Precision Care',
     description:
-        "Explore the benefits and applications of robotic surgery in gastrointestinal (GI) diseases like colorectal cancer, GERD, rectal cancer, and more.",
-    keywords:
-        "robotic surgery, da vinci system, minimally invasive surgery, colorectal cancer treatment, GI surgery, Bangalore"
+      'Explore advanced robotic surgery techniques with Dr. Shabeer Ahmed in Bangalore. Experience precision, faster recovery, and minimally invasive surgical care.',
+    url: 'https://www.drshabeerahmed.in/robotic-surgeries',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RoboticSurgeryPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
-
+        
             {/* Banner Section */}
             <BariatricBanner
                 title="Robotic Surgery"

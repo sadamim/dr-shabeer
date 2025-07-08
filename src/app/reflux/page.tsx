@@ -7,12 +7,24 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Surgery for Reflux Disease - GERD Treatment | Bangalore",
-    description:
-        "Learn about surgery options for GERD including fundoplication, LINX device, and endoscopic treatments. Find expert care in Bangalore.",
-    keywords:
-        "gerd surgery, reflux disease treatment, laparoscopic fundoplication, linx device, acid reflux treatment, Bangalore"
+  title: 'Surgery for Reflux Disease',
+  description: 'What is Surgery for Reflux Disease',
+  keywords: 'Reflux Surgery, GERD treatment, Acid Reflux Surgery, Anti-reflux procedure, Bangalore',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/reflux',
+  },
+  openGraph: {
+    title: 'Surgery for Reflux Disease',
+    description: 'What is Surgery for Reflux Disease',
+    url: 'https://www.drshabeerahmed.in/reflux',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 
 export default function SurgeryForRefluxPage() {
     return (

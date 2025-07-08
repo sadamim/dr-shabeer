@@ -3,25 +3,35 @@
 import BariatricBanner from '@/components/BreadcrumbBanner';
 import FaqSection from '@/components/FaqSection';
 import { Container, Row, Col } from 'react-bootstrap';
-import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Gallstones - Causes, Symptoms & Treatment | Bangalore",
+  title: 'Gallbladder Surgery Specialist in Bangalore– Dr. Shabeer Ahmed',
+  description:
+    'Looking for expert gallbladder surgery in Bangalore? Consult Dr. Shabeer Ahmed, a trusted specialist offering advanced laparoscopic treatment with excellent care.',
+  keywords:
+    'Gallbladder Surgery Specialist in Bangalore, Gallstones Treatment Bangalore, Laparoscopic Gallbladder Removal, Dr. Shabeer Ahmed Gallbladder Surgery',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/gallstones-treatments',
+  },
+  openGraph: {
+    title: 'Gallbladder Surgery Specialist in Bangalore– Dr. Shabeer Ahmed',
     description:
-        "Understand the causes of gallstones and learn about treatment options like Laparoscopic Cholecystectomy and ERCP.",
-    keywords:
-        "gallstones, gallbladder stones, laparoscopic cholecystectomy, ERCP, gallstone treatment in bangalore"
+      'Looking for expert gallbladder surgery in Bangalore? Consult Dr. Shabeer Ahmed, a trusted specialist offering advanced laparoscopic treatment with excellent care.',
+    url: 'https://www.drshabeerahmed.in/gallstones-treatments',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 
 export default function GallstonesPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+           
 
             {/* Banner Section */}
             <BariatricBanner

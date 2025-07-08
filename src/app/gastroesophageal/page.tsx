@@ -7,21 +7,30 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Gastroesophageal Reflux Disease (GERD) - Causes & Treatment | Bangalore",
+  title: 'Gastroesophageal Reflux Treatment in Bangalore | Dr. Ahmed',
+  description:
+    'Get advanced Gastroesophageal Reflux Treatment in Bangalore from Dr. Shabeer Ahmed. Expert care for acid reflux, heartburn, and digestive discomfort.',
+  keywords: 'Gastroesophageal Reflux Treatment in Bangalore',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/gastroesophageal',
+  },
+  openGraph: {
+    title: 'Gastroesophageal Reflux Treatment in Bangalore | Dr. Ahmed',
     description:
-        "Understand the causes, symptoms, and treatment options for Gastroesophageal Reflux Disease (GERD), including lifestyle changes, medications, and surgical interventions.",
-    keywords:
-        "gerd, gastroesophageal reflux disease, acid reflux, heartburn treatment, gerd surgery, Bangalore"
+      'Get advanced Gastroesophageal Reflux Treatment in Bangalore from Dr. Shabeer Ahmed. Expert care for acid reflux, heartburn, and digestive discomfort.',
+    url: 'https://www.drshabeerahmed.in/gastroesophageal',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function GastroesophagealPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+           
 
             {/* Banner Section */}
             <BariatricBanner

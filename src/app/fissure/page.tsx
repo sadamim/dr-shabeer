@@ -7,21 +7,32 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Anal Fissure - Laser Treatment & Surgery | Bangalore",
+  title: 'Fissure Treatment Bangalore | Expert Care by Dr. Shabeer Ahmed',
+  description:
+    'Fissure Treatment in Bangalore | Get Advanced, Painless Care from Renowned Colorectal Surgeon Dr. Shabeer Ahmed for Quick Relief and Long-Term Healing',
+  keywords:
+    'Fissure Treatment Bangalore, Painless Fissure Surgery, Colorectal Surgeon Bangalore, Anal Fissure Specialist, Dr. Shabeer Ahmed',
+  alternates: {
+    canonical: 'https://www.drshabeerahmed.in/fissure',
+  },
+  openGraph: {
+    title: 'Fissure Treatment Bangalore | Expert Care by Dr. Shabeer Ahmed',
     description:
-        "Understand anal fissure causes and how laser surgery offers a minimally invasive treatment option for faster recovery and reduced pain.",
-    keywords:
-        "anal fissure, laser treatment for fissure, fissure surgery, laser lis, anal fissure treatment in bangalore"
+      'Fissure Treatment in Bangalore | Get Advanced, Painless Care from Renowned Colorectal Surgeon Dr. Shabeer Ahmed for Quick Relief and Long-Term Healing',
+    url: 'https://www.drshabeerahmed.in/fissure',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 
 export default function AnalFissurePage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+           
 
             {/* Banner Section */}
             <BariatricBanner
