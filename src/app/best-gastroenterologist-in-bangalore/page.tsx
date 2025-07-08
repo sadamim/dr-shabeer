@@ -112,23 +112,7 @@ export default function BestGastroPage() {
 
       {/* FAQ Section */}
       <FaqSection
-        faqs={[
-          {
-            question: '1. Should I call a doctor if I have diarrhoea?',
-            answer:
-              'Yes, you should seek medical advice if diarrhoea lasts more than two to three weeks. Additionally, contact a physician if you notice changes in bowel habits after starting a new medication, or if you experience severe cramping, a fever lasting more than 24 hours, or symptoms of dehydration such as vomiting.',
-          },
-          {
-            question: '2. What is the best treatment for diarrhoea?',
-            answer:
-              'To alleviate diarrhoea symptoms, start by consuming only liquids and avoiding solid foods and dairy products. You can also use over-the-counter treatments such as Pepto-Bismol®, Kaopectate®, or Imodium® to help manage the condition.',
-          },
-          {
-            question: '3. What types of diagnosis are used to determine the exact cause of rectal bleeding?',
-            answer: 'There are four ways your doctor typically can identify the cause:',
-          },
-        ]}
-      />
+       />
     </>
   );
 }
