@@ -3,7 +3,6 @@
 import BariatricBanner from '@/components/BreadcrumbBanner';
 import FaqSection from '@/components/FaqSection';
 import { Container, Row, Col } from 'react-bootstrap';
-import Head from 'next/head';
 import Image from 'next/image';
 
 export const metadata = {
@@ -29,11 +28,7 @@ export const metadata = {
 export default function SurgeryForRefluxPage() {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+           
 
             {/* Banner Section */}
             <BariatricBanner

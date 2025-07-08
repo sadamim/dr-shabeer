@@ -31,17 +31,7 @@ export const metadata = {
 export default function BestGastroPage() {
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <link rel="canonical" href={metadata.canonical} />
-        <meta name="robots" content={metadata.robots} />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:url" content={metadata.canonical} />
-        <meta property="og:type" content="website" />
-      </Head>
+     
 
       {/* Banner Section */}
       <BreadcrumbBanner

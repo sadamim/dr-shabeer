@@ -38,17 +38,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <Head>
-        <title>Blog - Dr. Shabeer Ahmed | Gastroenterologist in Bangalore</title>
-        <meta
-          name="description"
-          content="Explore insightful articles on gastrointestinal health, written by Dr. Shabeer Ahmed and his team of experts."
-        />
-        <meta
-          name="keywords"
-          content="gastro blog, dr shabeer blog, gut health articles, digestive wellness, GI surgery insights"
-        />
-      </Head>
+     
 
       {/* Banner */}
       <BariatricBanner

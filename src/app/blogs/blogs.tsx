@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import axios from 'axios';
-import Head from 'next/head';
 import Image from 'next/image';
 import BariatricBanner from '@/components/BreadcrumbBanner';
 
@@ -28,13 +27,7 @@ export default function BlogPage() {
 
     return (
         <>
-            <Head>
-                {/* SEO tags as before */}
-                <title>Blog - Dr. Shabeer Ahmed | Gastroenterologist in Bangalore</title>
-                <meta name="description" content="Explore insightful articles on gastrointestinal health..." />
-                <meta name="keywords" content="gastro blog, dr shabeer blog..." />
-                {/* ...more meta tags */}
-            </Head>
+          
 
             {/* Banner Section */}
             <BariatricBanner
