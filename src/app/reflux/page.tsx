@@ -6,15 +6,18 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Surgery for Reflux Disease',
-  description: 'What is Surgery for Reflux Disease',
-  keywords: 'Reflux Surgery, GERD treatment, Acid Reflux Surgery, Anti-reflux procedure, Bangalore',
+  title: 'Surgical Gastroenterologist in Bangalore | Dr. Shabeer Ahmed',
+  description:
+    'Consult Dr. Shabeer Ahmed, leading Surgical Gastroenterologist in Bangalore, for expert treatment in GI, liver, pancreas, reflux, hernia, and laparoscopic surgery.',
+  keywords:
+    'Surgical Gastroenterologist in Bangalore, Reflux Surgery Bangalore, GERD Treatment Bangalore, Laparoscopic Reflux Surgery, Dr. Shabeer Ahmed GI Specialist',
   alternates: {
     canonical: 'https://www.drshabeerahmed.in/reflux',
   },
   openGraph: {
-    title: 'Surgery for Reflux Disease',
-    description: 'What is Surgery for Reflux Disease',
+    title: 'Surgical Gastroenterologist in Bangalore | Dr. Shabeer Ahmed',
+    description:
+      'Consult Dr. Shabeer Ahmed, leading Surgical Gastroenterologist in Bangalore, for expert treatment in GI, liver, pancreas, reflux, hernia, and laparoscopic surgery.',
     url: 'https://www.drshabeerahmed.in/reflux',
     type: 'website',
   },
@@ -23,6 +26,7 @@ export const metadata = {
     follow: true,
   },
 };
+
 
 
 export default function SurgeryForRefluxPage() {

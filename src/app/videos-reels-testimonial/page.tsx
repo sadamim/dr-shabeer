@@ -154,6 +154,8 @@ export default function MediaShowcasePage() {
   return (
     <div className="media-showcase-wrapper">
       <div className="container">
+                <h1 className="page-title d-none">Patient Testimonials & Video Reels</h1>
+
         <h2 className="page-title">Media & Testimonials</h2>
 {/* 
         <section className="media-section">

@@ -53,6 +53,8 @@ const [selected, setSelected] = useState<string | null>(null);
   return (
     <div className="quiz-page-wrapper">
       <div className="quiz-container">
+        <h1 className="page-title d-none">Dr Shabeer Ahmed Quizzes</h1>
+
         <h2 className="quiz-title">🧠 Health Awareness Quiz</h2>
 
         {showResult ? (
