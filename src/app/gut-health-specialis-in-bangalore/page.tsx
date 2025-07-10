@@ -6,11 +6,11 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'The Best Gut Health Specialist in Bangalore | Dr. Shabeer Ahmed.',
+  title: 'Best Gut Health Specialist in Bangalore | Expert Digestive Care. ',
   description:
-    'Consult the leading Gut Health Specialist in Bangalore, Dr. Shabeer Ahmed, for expert care in gastrointestinal wellness, digestive issues, and advanced treatments.',
+    'Gut Health Specialist in Bangalore | Expert Gut Health Nutritionist Dr. Shabeer Ahmed offers personalized care for digestive wellness and overall health.',
   keywords:
-    'gut health, gut care, probiotics, prebiotics, digestive health, fiber diet, hydration, Bangalore',
+    'Gut Health Specialist in Bangalore, Best Gut Health Specialist Bangalore, Gut Health Nutritionist and Consultant in Bangalore, Gut Health Nutritionist Bangalore',
   alternates: {
     canonical: 'https://www.drshabeerahmed.in/gut-health-specialis-in-bangalore',
   },
@@ -32,7 +32,7 @@ export default function GutCarePage() {
     return (
         <>
           
-
+            <h1 className='d-none'>Gut Health Specialist in Bangalore</h1>
             {/* Banner Section */}
             <BariatricBanner
                 title="Gut Care"

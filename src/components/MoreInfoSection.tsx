@@ -19,8 +19,8 @@ const MoreInfoSection = () => {
                 </Button>
 
                 {showContent && (
-                    <div className="hover-content position-absolute">
-                        <section className="mor-info">
+                    <div className="hover-content position-absolute mt-100">
+                        <section className="mor-info ">
                             <Container>
                                 <Row style={{ width: '330px' }}>
                                     {/* Card 1 */}
@@ -30,8 +30,8 @@ const MoreInfoSection = () => {
                                                 <Image
                                                     src="/img/category/stethoscope-solid.svg"
                                                     alt="bone-image"
-                                                    width={30}
-                                                    height={30}
+                                                    width={20}
+                                                    height={20}
                                                 />
                                             </div>
                                             <div className="flex-grow-1 text-white">
@@ -57,8 +57,8 @@ const MoreInfoSection = () => {
                                                 <Image
                                                     src="/img/category/stethoscope-solid.svg"
                                                     alt="stethoscope-image"
-                                                    width={30}
-                                                    height={30}
+                                                    width={20}
+                                                    height={20}
                                                 />
                                             </div>
                                             <div className="flex-grow-1 text-white">
@@ -84,8 +84,8 @@ const MoreInfoSection = () => {
                                                 <Image
                                                     src="/img/category/phone-solid.svg"
                                                     alt="phone-image"
-                                                    width={30}
-                                                    height={30}
+                                                    width={20}
+                                                    height={20}
                                                 />
                                             </div>
                                             <div className="flex-grow-1 text-white">
@@ -111,8 +111,8 @@ const MoreInfoSection = () => {
                                                 <Image
                                                     src="/img/category/phone-solid.svg"
                                                     alt="contact-image"
-                                                    width={30}
-                                                    height={30}
+                                                    width={20}
+                                                    height={20}
                                                 />
                                             </div>
                                             <div className="flex-grow-1 text-white">

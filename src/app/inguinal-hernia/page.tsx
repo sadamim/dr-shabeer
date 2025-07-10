@@ -6,11 +6,11 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Dr. Shabeer Ahmed | Leading Hernia Repair Specialist in Bangalore',
+  title: 'Best Doctors For Inguinal Hernia Treatment In Bangalore',
   description:
-    'Dr. Shabeer Ahmed, leading Hernia Repair Specialist in Bangalore, offers advanced laparoscopic hernia surgery with minimal downtime and personalized surgical care.',
+    'Top Doctors for Inguinal Hernia Treatment in Bangalore | Dr. Shabeer Ahmed – Expert in advanced hernia surgery with precision care for effective and lasting relief.',
   keywords:
-    'Hernia Repair Specialist in Bangalore, Inguinal Hernia Surgery Bangalore, Laparoscopic Hernia Repair, Dr. Shabeer Ahmed, Best Hernia Surgeon Bangalore',
+    'Best Doctors For Inguinal Hernia Treatment In Bangalore, Inguinal Hernia',
   alternates: {
     canonical: 'https://www.drshabeerahmed.in/inguinal-hernia',
   },
@@ -32,7 +32,7 @@ export default function InguinalHerniaPage() {
     return (
         <>
           
-
+            <h1 className='d-none'>Best Doctors For Inguinal Hernia Treatment In Bangalore</h1>
             {/* Banner Section */}
             <BariatricBanner
                 title="Inguinal Hernia"

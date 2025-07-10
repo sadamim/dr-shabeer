@@ -6,11 +6,11 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Surgical Gastroenterologist in Bangalore | Dr. Shabeer Ahmed',
+  title: 'Surgical Gastroenterologist Specialist Bangalore Dr Shabeer Ahmed',
   description:
-    'Consult Dr. Shabeer Ahmed, leading Surgical Gastroenterologist in Bangalore, for expert treatment in GI, liver, pancreas, reflux, hernia, and laparoscopic surgery.',
+    'Dr. Shabeer Ahmed, a leading Surgical Gastroenterologist in Bangalore, specializes in advanced GI surgeries, ensuring expert care with precision and excellence.',
   keywords:
-    'Surgical Gastroenterologist in Bangalore, Reflux Surgery Bangalore, GERD Treatment Bangalore, Laparoscopic Reflux Surgery, Dr. Shabeer Ahmed GI Specialist',
+    'Surgical Gastroenterologist Specialist Bangalore',
   alternates: {
     canonical: 'https://www.drshabeerahmed.in/reflux',
   },
@@ -32,7 +32,7 @@ export const metadata = {
 export default function SurgeryForRefluxPage() {
     return (
         <>
-           
+            <h1 className='d-none'>Surgical Gastroenterologist Specialist Bangalore</h1>
 
             {/* Banner Section */}
             <BariatricBanner
