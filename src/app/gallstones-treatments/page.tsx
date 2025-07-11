@@ -30,21 +30,21 @@ export const metadata = {
 
 export default function GallstonesPage() {
     return (
-        <>
-           
-
+        <div className="new-gallstone-page">
             {/* Banner Section */}
-            <BariatricBanner
-                title="Gallstones"
-                imageSrc="/img/bannerslider/Gallstones 1.webp"
-            />
+            <div className="new-gallstone-banner">
+                <BariatricBanner
+                    title="Gallstones"
+                    imageSrc="/img/bannerslider/Gallstones 1.webp"
+                />
+            </div>
 
             {/* Main Content */}
-            <Container className="my-5">
-                {/* Image + Intro Text (col-4 + col-8) */}
-                <Row className="align-items-center">
+            <Container className="my-5 new-gallstone-main">
+                {/* Image + Intro Text (side by side) */}
+                <Row className="new-gallstone-row-animate">
                     {/* Image Section */}
-                    <Col lg={4} md={4} className="mb-4 d-flex justify-content-center">
+                    <Col lg={5} md={5} className="mb-4 d-flex justify-content-center new-gallstone-img-section">
                         <Image
                             src="/img/bannerslider/Gall stones.webp"
                             alt="Gallstones"
@@ -53,18 +53,18 @@ export default function GallstonesPage() {
                             className="img-fluid rounded"
                         />
                     </Col>
-
                     {/* Description Section */}
-                    <Col lg={8} md={8} className="mb-4">
+                    <Col lg={7} md={7} className="mb-4 new-gallstone-text-animate">
                         <p className="text-justify">
-                            Gallstones form when substances in bile (such as cholesterol or bilirubin) become imbalanced and crystallize, creating solid particles in the gallbladder.
+                            Gallstones form when substances in bile (such as cholesterol or bilirubin) become imbalanced and crystallize, creating solid particles in the gallbladder. <br />
                             There are two main types of gallstones: cholesterol stones and pigment stones — most common being cholesterol stones, which are not directly linked to abnormal lipid profiles.
                         </p>
                     </Col>
                 </Row>
 
-                {/* Causes of Gallstones */}
-                <Row>
+                {/* Causes of Gallstones and rest of the content */}
+                <div className="new-gallstone-section">
+                  <Row>
                     <Col lg={12} md={12}>
                         <h4>What Causes Gallstones?</h4>
 
@@ -124,11 +124,12 @@ export default function GallstonesPage() {
                             Before deciding on surgery, a careful medical history and assessment is important to rule out concomitant diseases and ensure safe surgical outcomes.
                         </p>
                     </Col>
-                </Row>
+                  </Row>
+                </div>
             </Container>
 
             {/* FAQ Section */}
             <FaqSection />
-        </>
+        </div>
     );
 }

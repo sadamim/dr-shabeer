@@ -64114,3 +64114,172 @@ li strong {
   margin-right:   30% !important;
 }
 
+
+/*new code*/
+/* --- new-gallstone: Gallstones Treatments Page Image-Text Side-by-Side Layout (scoped) --- */
+/* --- new-gallstone: Remove Repetition and Clean Up Paragraph Height (scoped) --- */
+.new-gallstone-page .new-gallstone-row-animate {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: nowrap;
+  margin-bottom: 2.5rem;
+}
+
+.new-gallstone-page .new-gallstone-img-section {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+}
+
+/* --- new-gallstone: Remove All Effects from Gallstones Image (scoped) --- */
+.new-gallstone-page .new-gallstone-img-section img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  min-width: 180px;
+  border-radius: 32px 32px 80px 32px;
+  box-shadow: 0 8px 32px rgba(0,123,255,0.13);
+  border: none;
+  transition: box-shadow 0.3s, transform 0.3s;
+  filter: none;
+  animation: none;
+  background: none;
+}
+.new-gallstone-page .new-gallstone-img-section img:hover {
+  box-shadow: 0 16px 48px 0 rgba(30, 136, 229, 0.22), 0 2px 8px rgba(0,0,0,0.10);
+  transform: scale(1.045) rotate(-1.5deg);
+}
+/* --- End new-gallstone: Remove All Effects from Gallstones Image (scoped) --- */
+
+.new-gallstone-page .new-gallstone-main p,
+.new-gallstone-page .new-gallstone-text-animate p {
+  line-height: 1.5;
+  margin-top: 10px;
+  color: #000;
+  margin-bottom: 2.2em;
+  font-size: 1.18rem;
+}
+
+@media (max-width: 991px) {
+  .new-gallstone-page .new-gallstone-row-animate {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  .new-gallstone-page .new-gallstone-img-section,
+  .new-gallstone-page .new-gallstone-text-animate {
+    min-height: unset;
+    max-width: 100%;
+    padding: 0;
+  }
+  .new-gallstone-page .new-gallstone-img-section img {
+    max-width: 320px;
+    min-width: 180px;
+    width: 90%;
+  }
+}
+@media (min-width: 992px) {
+  .new-gallstone-page .new-gallstone-row-animate {
+    align-items: stretch;
+  }
+  .new-gallstone-page .new-gallstone-text-animate {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .new-gallstone-page .new-gallstone-text-animate p {
+    max-width: 540px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 100%;
+  }
+}
+/* --- End new-gallstone: Remove Repetition and Clean Up Paragraph Height (scoped) --- */
+/* --- new-gallstone: Section Styling for Gallstone Details (scoped) --- */
+.new-gallstone-page .new-gallstone-section {
+  background: #fafdff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,123,255,0.06);
+  padding: 2.5rem 2rem 2.5rem 2rem;
+  margin-bottom: 2.5rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.new-gallstone-page .new-gallstone-section h4 {
+  color: #0a6ebd;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  margin-top: 0;
+  margin-bottom: 1.1em;
+  background: linear-gradient(90deg, #e0f7fa 60%, #f8fbff 100%);
+  padding: 0.4em 1em;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.new-gallstone-page .new-gallstone-section h6 {
+  color: #1bbd7e;
+  font-size: 1.13rem;
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.7em;
+  letter-spacing: 0.01em;
+}
+
+.new-gallstone-page .new-gallstone-section p {
+  font-size: 1.13rem;
+  color: #222;
+  line-height: 2.1;
+  margin-bottom: 1.2em;
+}
+
+.new-gallstone-page .new-gallstone-section ul,
+.new-gallstone-page .new-gallstone-section ol {
+  margin-left: 1.2em;
+  margin-bottom: 1.2em;
+  font-size: 1.08rem;
+  color: #2b3a4a;
+}
+
+.new-gallstone-page .new-gallstone-section li {
+  margin-bottom: 0.7em;
+  padding-left: 0.2em;
+  position: relative;
+}
+
+.new-gallstone-page .new-gallstone-section strong {
+  color: #0a6ebd;
+  font-weight: 700;
+}
+
+.new-gallstone-page .new-gallstone-section ol > li > strong,
+.new-gallstone-page .new-gallstone-section ul > li > strong {
+  color: #1976d2;
+  font-size: 1.08em;
+  font-weight: 700;
+  background: linear-gradient(90deg, #e3f2fd 60%, #e0f7fa 100%);
+  border-radius: 6px;
+  padding: 0.1em 0.5em;
+  display: inline-block;
+  margin-bottom: 0.2em;
+}
+
+.new-gallstone-page .new-gallstone-section .mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+@media (max-width: 767px) {
+  .new-gallstone-page .new-gallstone-section {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  }
+}
+/* --- End new-gallstone: Section Styling for Gallstone Details (scoped) --- */
