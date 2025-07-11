@@ -41,8 +41,8 @@ export default function GallstonesPage() {
 
             {/* Main Content */}
             <Container className="my-5 new-gallstone-main">
-                {/* Image + Intro Text (side by side) */}
-                <Row className="new-gallstone-row-animate">
+                {/* Image + Intro Text (side by side, top-aligned) */}
+                <Row className="new-gallstone-row-animate align-items-start">
                     {/* Image Section */}
                     <Col lg={5} md={5} className="mb-4 d-flex justify-content-center new-gallstone-img-section">
                         <Image
@@ -54,11 +54,14 @@ export default function GallstonesPage() {
                         />
                     </Col>
                     {/* Description Section */}
-                    <Col lg={7} md={7} className="mb-4 new-gallstone-text-animate">
-                        <p className="text-justify">
-                            Gallstones form when substances in bile (such as cholesterol or bilirubin) become imbalanced and crystallize, creating solid particles in the gallbladder. <br />
-                            There are two main types of gallstones: cholesterol stones and pigment stones — most common being cholesterol stones, which are not directly linked to abnormal lipid profiles.
-                        </p>
+                    <Col lg={8} md={8} className="mb-4 new-gallstone-text-animate">
+                        <div>
+                            <h3>Gallstones</h3>
+                            <p className="text-justify">
+                                Gallstones form when substances in bile (such as cholesterol or bilirubin) become imbalanced and crystallize, creating solid particles in the gallbladder. <br />
+                                There are two main types of gallstones: cholesterol stones and pigment stones — most common being cholesterol stones, which are not directly linked to abnormal lipid profiles.
+                            </p>
+                        </div>
                     </Col>
                 </Row>
 
