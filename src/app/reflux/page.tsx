@@ -31,21 +31,21 @@ export const metadata = {
 
 export default function SurgeryForRefluxPage() {
     return (
-        <>
-            <h1 className='d-none'>Surgical Gastroenterologist Specialist Bangalore</h1>
-
+        <div className="reflux-page new-gallstone-page">
             {/* Banner Section */}
-            <BariatricBanner
-                title="Surgery for Reflux Disease"
-                imageSrc="/img/bannerslider/Surgery For Reflux 2.webp"
-            />
+            <div className="reflux-banner new-gallstone-banner">
+                <BariatricBanner
+                    title="Surgery for Reflux Disease"
+                    imageSrc="/img/bannerslider/Surgery For Reflux 2.webp"
+                />
+            </div>
 
             {/* Main Content */}
-            <Container className="my-5">
-                {/* Image + Intro Text (col-4 + col-8) */}
-                <Row className="align-items-center">
+            <Container className="my-5 reflux-main new-gallstone-main">
+                {/* Image + Intro Text (side by side, top-aligned) */}
+                <Row className="align-items-center new-gallstone-row-animate">
                     {/* Image Section */}
-                    <Col lg={4} md={4} className="mb-4 d-flex justify-content-center">
+                    <Col lg={4} md={4} className="mb-4 d-flex justify-content-center reflux-img-section new-gallstone-img-section">
                         <Image
                             src="/img/bannerslider/Reflux surgery.webp"
                             alt="Surgery for Reflux Disease"
@@ -54,20 +54,22 @@ export default function SurgeryForRefluxPage() {
                             className="img-fluid rounded"
                         />
                     </Col>
-
                     {/* Description Section */}
-                    <Col lg={8} md={8} className="mb-4">
-                        <h3>What is Surgery for Reflux Disease?</h3>
-                        <p className="text-justify">
-                            Surgery for reflux disease, also known as Gastroesophageal Reflux Disease (GERD), is an increasingly popular treatment option for patients suffering from chronic acid reflux.
-                            It involves minimally invasive procedures that strengthen the lower esophageal sphincter (LES), preventing stomach contents from flowing back into the esophagus.
-                            This can be a long-term solution for those who don't respond well to medications or lifestyle changes.
-                        </p>
+                    <Col lg={8} md={8} className="mb-4 reflux-text-animate new-gallstone-text-animate">
+                        <div>
+                            <h3>What is Surgery for Reflux Disease?</h3>
+                            <p className="text-justify">
+                                Surgery for reflux disease, also known as Gastroesophageal Reflux Disease (GERD), is an increasingly popular treatment option for patients suffering from chronic acid reflux.
+                                It involves minimally invasive procedures that strengthen the lower esophageal sphincter (LES), preventing stomach contents from flowing back into the esophagus.
+                                This can be a long-term solution for those who don't respond well to medications or lifestyle changes.
+                            </p>
+                        </div>
                     </Col>
                 </Row>
 
-                {/* What is GERD? */}
-                <Row>
+                {/* What is GERD? and rest of the content */}
+                <div className="reflux-section new-gallstone-section">
+                  <Row>
                     <Col lg={12} md={12}>
                         <h4>Understanding GERD</h4>
                         <p className="text-justify">
@@ -75,7 +77,6 @@ export default function SurgeryForRefluxPage() {
                             This backflow is known as acid reflux, and when it becomes frequent or persistent, it is classified as GERD.
                             Left untreated, GERD can lead to complications such as esophagitis, Barrett’s esophagus, or even esophageal cancer.
                         </p>
-
                         {/* Causes of GERD */}
                         <h5 className="mt-4">Common Causes of GERD</h5>
                         <ul>
@@ -86,7 +87,6 @@ export default function SurgeryForRefluxPage() {
                             <li><strong>Delayed Stomach Emptying:</strong> Conditions that slow the emptying of the stomach can increase the risk of GERD by allowing food and acid to linger.</li>
                             <li><strong>Dietary & Lifestyle Factors:</strong> Fatty foods, chocolate, caffeine, alcohol, smoking, and eating late at night can trigger GERD symptoms.</li>
                         </ul>
-
                         {/* Symptoms */}
                         <h5 className="mt-4">Common Symptoms of GERD</h5>
                         <ul>
@@ -97,7 +97,6 @@ export default function SurgeryForRefluxPage() {
                             <li><strong>Chronic Cough, Sore Throat, or Hoarseness:</strong> Due to irritation from acid exposure.</li>
                             <li><strong>Laryngitis and Wheezing:</strong> Acid can irritate the throat and airways, causing voice changes and breathing issues.</li>
                         </ul>
-
                         {/* Diagnosis */}
                         <h5 className="mt-4">How is GERD Diagnosed?</h5>
                         <ul>
@@ -107,10 +106,8 @@ export default function SurgeryForRefluxPage() {
                             <li><strong>Manometry:</strong> Evaluates the function and pressure of the esophageal muscles and LES.</li>
                             <li><strong>Barium Swallow X-ray:</strong> Helps identify structural abnormalities like hiatal hernias.</li>
                         </ul>
-
                         {/* Treatment Options */}
                         <h4 className="mt-4">Treatment Options for GERD</h4>
-
                         <h6>1. Lifestyle and Dietary Modifications</h6>
                         <ul>
                             <li><strong>Weight loss:</strong> Reduces pressure on the abdomen and LES.</li>
@@ -120,7 +117,6 @@ export default function SurgeryForRefluxPage() {
                             <li><strong>Elevate the head of the bed:</strong> Helps prevent nighttime reflux.</li>
                             <li><strong>Quit smoking and reduce alcohol consumption:</strong> Both can worsen symptoms.</li>
                         </ul>
-
                         <h6>2. Medications</h6>
                         <ul>
                             <li><strong>Antacids:</strong> Neutralize stomach acid (e.g., Tums, Maalox).</li>
@@ -128,12 +124,10 @@ export default function SurgeryForRefluxPage() {
                             <li><strong>Proton Pump Inhibitors (PPIs):</strong> Stronger acid reducers that heal the esophagus (e.g., omeprazole, esomeprazole).</li>
                             <li><strong>Prokinetics:</strong> Improve stomach emptying (e.g., metoclopramide).</li>
                         </ul>
-
                         <h6>3. Surgical Treatments</h6>
                         <p className="text-justify"><strong>a. Fundoplication:</strong> A surgical procedure where the top of the stomach is wrapped around the LES to strengthen it and prevent acid reflux.</p>
                         <p className="text-justify"><strong>b. LINX Device:</strong> A small, flexible ring of magnetic beads placed around the LES to keep it closed and prevent reflux without altering anatomy.</p>
                         <p className="text-justify"><strong>c. Endoscopic Treatments:</strong> Minimally invasive techniques like the Stretta procedure help tighten the LES using heat energy.</p>
-
                         {/* Benefits of Surgery */}
                         <h5 className="mt-4">Benefits of Surgical Treatment for GERD</h5>
                         <ul>
@@ -143,7 +137,6 @@ export default function SurgeryForRefluxPage() {
                             <li><strong>Minimally Invasive:</strong> Laparoscopic and robotic-assisted surgeries allow faster recovery and minimal discomfort.</li>
                             <li><strong>No Long-term Medication Dependence:</strong> Many patients no longer require daily PPIs after successful surgery.</li>
                         </ul>
-
                         {/* Risks and Considerations */}
                         <h5 className="mt-4">Risks and Considerations</h5>
                         <p className="text-justify">
@@ -155,7 +148,6 @@ export default function SurgeryForRefluxPage() {
                             <li><strong>Swallowing difficulties:</strong> May occur temporarily or rarely persistently if the wrap is too tight.</li>
                             <li><strong>Recurrence:</strong> Though uncommon, GERD can return if lifestyle changes aren’t maintained.</li>
                         </ul>
-
                         {/* Conclusion */}
                         <h5 className="mt-4">Conclusion</h5>
                         <p className="text-justify">
@@ -164,11 +156,12 @@ export default function SurgeryForRefluxPage() {
                             If you're experiencing persistent GERD symptoms, consult a specialist to determine whether surgical intervention is right for your condition.
                         </p>
                     </Col>
-                </Row>
+                  </Row>
+                </div>
             </Container>
 
             {/* FAQ Section */}
             <FaqSection />
-        </>
+        </div>
     );
 }

@@ -69,13 +69,13 @@ export default function GutCarePage() {
                     <Col lg={12} md={12}>
                         <h2>Ways to Support Gut Health</h2>
 
-                        <p className="text-justify">
+                        <div className="text-justify">
                             <strong>1. Probiotics and Prebiotics</strong><br />
                             <ul>
                                 <li><strong>Probiotics:</strong> Live beneficial bacteria found in fermented foods (like yogurt, kimchi, or kefir) or supplements. They help balance gut microbiota.</li>
                                 <li><strong>Prebiotics:</strong> Non-digestible fibers that feed good bacteria, found in foods like garlic, onions, bananas, and asparagus.</li>
                             </ul>
-                        </p>
+                        </div>
 
                         <p className="text-justify">
                             <strong>2. High-Fiber Diet</strong><br />

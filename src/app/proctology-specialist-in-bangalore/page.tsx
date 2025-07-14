@@ -51,9 +51,9 @@ export default function ProctologySpecialistPage() {
               />
             </Col>
 
-            <Col lg={8} md={8} className="mb-4 new-proctology-text-animate">
+            <Col lg={8} md={8} className=" new-proctology-text-animate">
               <div>
-                <h4>What is Proctology?</h4>
+                <h3 className='mb-4 mt-5'>What is Proctology?</h3>
                 <p className="text-justify">
                   Proctology is a medical specialty focusing on the diagnosis and treatment of disorders of the rectum, anus, and colon. Common conditions include hemorrhoids (piles), anal fissures, fistulas, and abscesses. With minimally invasive techniques and laser-assisted procedures, patients can experience faster recovery and minimal discomfort. Dr. Shabeer Ahmed is a renowned proctologist in Bangalore, offering expert care for both acute and chronic conditions with compassion and precision.
                 </p>
@@ -61,7 +61,7 @@ export default function ProctologySpecialistPage() {
             </Col>
           </Row>
 
-          <div className="new-proctology-section">
+          <div className="new-proctology-section mb-0">
             <Row>
               <Col lg={12}>
                 <h4>Common Proctology Conditions Treated</h4>

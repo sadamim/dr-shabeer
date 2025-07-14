@@ -20,6 +20,7 @@
     "aos": "^2.3.4",
     "axios": "^1.9.0",
     "bootstrap": "^5.3.6",
+    "canvas-confetti": "^1.9.3",
     "cloudinary": "^2.6.1",
     "jquery": "^3.7.1",
     "mongoose": "^8.15.1",

@@ -57,18 +57,29 @@ const specialities = [
 // Component definition
 export default function AllSpecialitiesPage() {
   return (
-    <>
-     
-
+    <div className="new-specialities-style">
+      {/* Decorative SVG background */}
+      <div className="specialities-bg-svg">
+        <svg width="100%" height="100%" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="100" r="80" fill="#eaf4fc" opacity="0.5"/>
+          <circle cx="1300" cy="80" r="60" fill="#d0f5e8" opacity="0.4"/>
+          <rect x="1100" y="400" width="120" height="120" rx="30" fill="#f9e7ef" opacity="0.3"/>
+          <g opacity="0.10">
+            <text x="100" y="550" fontSize="90" fontWeight="bold" fill="#1bbd7e">🩺</text>
+            <text x="1200" y="580" fontSize="70" fontWeight="bold" fill="#007bff">💊</text>
+            <text x="700" y="100" fontSize="60" fontWeight="bold" fill="#f9b115">🧬</text>
+            <text x="400" y="400" fontSize="80" fontWeight="bold" fill="#e63946">❤️</text>
+          </g>
+        </svg>
+      </div>
       <section className="all-specialities-page">
         <div className="container">
           <div className="text-center mb-5 mt-80">
             <h1 className="page-title mt-5">All Specialities</h1>
           </div>
-
           <div className="specialities-grid">
             {specialities.map((item, index) => (
-              <Link href={item.href} key={index} className="speciality-card">
+              <Link href={item.href} key={index} className="speciality-card anim-card">
                 <div className="card-content">
                   <div className="icon-wrapper">
                     <Image
@@ -85,6 +96,6 @@ export default function AllSpecialitiesPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

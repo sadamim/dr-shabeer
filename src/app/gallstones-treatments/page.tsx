@@ -48,8 +48,8 @@ export default function GallstonesPage() {
                         <Image
                             src="/img/bannerslider/Gall stones.webp"
                             alt="Gallstones"
-                            width={400}
-                            height={300}
+                            width={320}
+                            height={220}
                             className="img-fluid rounded"
                         />
                     </Col>
