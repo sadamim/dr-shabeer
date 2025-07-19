@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../styles/globals.css";
 import "../../styles/custom.css";
@@ -8,8 +9,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MoreInfoSection from "@/components/MoreInfoSection";
 import CustomCursor from "@/components/CustomCursor";
-
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,12 +19,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-/*
-export const metadata: Metadata = {
-  title: "Dr Shabeer Ahmed | Gastrointestinal & Laparoscopic Surgeon",
-  description: "Dr. Shabeer Ahmed is a renowned Gastrointestinal and Laparoscopic Surgeon, specializing in advanced minimally invasive procedures with exceptional patient care.",
-  keywords: "Dr Shabeer Ahmed, Gastrointestinal Surgeon, Laparoscopic Surgeon, Colorectal Surgeon, Metabolic Surgery",
-};*/
 
 export default function RootLayout({
   children,
@@ -34,7 +27,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <head>
+        {/* ✅ Google Search Console Verification */}
+        <meta name="google-site-verification" content="ElursTQ7VyzXcjb3RB3t1CLDA77OycdQ3TJImNTYBAk" />
+
+        {/* ✅ Google Analytics Tag */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-EF7H9HEGVC"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EF7H9HEGVC');
+          `}
+        </Script>
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <CustomCursor />
         <MoreInfoSection />
         <Header />
