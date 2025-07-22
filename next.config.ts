@@ -1,9 +1,18 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
     domains: ['res.cloudinary.com'],
+  },
+
+  async redirects() {
+    return [
+      {
+        source: '/:slug*.html',
+        destination: '/:slug*',
+        permanent: true,
+      },
+    ];
   },
 };
 
