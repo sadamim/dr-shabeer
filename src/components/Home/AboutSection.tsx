@@ -39,11 +39,7 @@ const AboutSection = () => {
                                     gastro-intestinal cancer. He has his passion for Video Assisted Thoracic Surgery
                                     (VATS), Bariatric Surgery and Metabolic Surgery.
                                 </p>
-                                <Link href="/aboutus">
-                                    <button className="btn text-white bg-primary mt-2" type="button">
-                                        Read More
-                                    </button>
-                                </Link>
+                               
                             </div>
                         </div>
                     </div>
