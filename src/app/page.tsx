@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   description: "Dr. Shabeer Ahmed is a renowned Gastrointestinal and Laparoscopic Surgeon, specializing in advanced minimally invasive procedures with exceptional patient care.",
   keywords: "Dr Shabeer Ahmed, Gastrointestinal Surgeon, Laparoscopic Surgeon, Colorectal Surgeon, Metabolic Surgery",
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/',
+    canonical: 'https://drshabeerahmed.in/',
   },
   openGraph: {
     title: 'Dr. Shabeer Ahmed is a renowned Gastrointestinal and Laparoscopic Surgeon, specializing in advanced minimally invasive procedures with exceptional patient care.',
     description:
       'Consult Dr. Shabeer Ahmed is a renowned Gastrointestinal and Laparoscopic Surgeon, specializing in advanced minimally invasive procedures with exceptional patient care.',
-    url: 'https://www.drshabeerahmed.in/',
+    url: 'https://drshabeerahmed.in/',
     type: 'website',
   },
   robots: {
