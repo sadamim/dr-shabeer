@@ -9,13 +9,13 @@ export const metadata = {
   keywords:
     'Surgical Gastroenterologist Specialist in Bangalore, Laparoscopic Surgeon in Bangalore, Advanced Laparoscopic Specialist in Bangalore',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/specialities',
+    canonical: 'https://drshabeerahmed.in/specialities',
   },
   openGraph: {
     title: 'Advanced Laparoscopic Specialist in Bangalore – Dr. Shabeer Ahmed',
     description:
       'Dr. Shabeer Ahmed is a leading Advanced Laparoscopic Specialist in Bangalore, offering expert care in GI, bariatric, and minimally invasive surgeries.',
-    url: 'https://www.drshabeerahmed.in/specialities',
+    url: 'https://drshabeerahmed.in/specialities',
     type: 'website',
   },
   robots: {

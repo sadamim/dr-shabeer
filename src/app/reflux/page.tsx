@@ -12,13 +12,13 @@ export const metadata = {
   keywords:
     'Surgical Gastroenterologist Specialist Bangalore',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/reflux',
+    canonical: 'https://drshabeerahmed.in/reflux',
   },
   openGraph: {
     title: 'Surgical Gastroenterologist in Bangalore | Dr. Shabeer Ahmed',
     description:
       'Consult Dr. Shabeer Ahmed, leading Surgical Gastroenterologist in Bangalore, for expert treatment in GI, liver, pancreas, reflux, hernia, and laparoscopic surgery.',
-    url: 'https://www.drshabeerahmed.in/reflux',
+    url: 'https://drshabeerahmed.in/reflux',
     type: 'website',
   },
   robots: {

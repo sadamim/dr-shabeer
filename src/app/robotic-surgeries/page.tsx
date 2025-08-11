@@ -12,13 +12,13 @@ export const metadata = {
   keywords:
     'Robotic Surgery Bangalore, Minimally Invasive Surgery, Advanced Surgical Techniques, Dr. Shabeer Ahmed Robotic Surgery, Precision Surgery Bangalore',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/robotic-surgeries',
+    canonical: 'https://drshabeerahmed.in/robotic-surgeries',
   },
   openGraph: {
     title: 'Robotic Surgery | Dr. Shabeer Ahmed – Advanced Precision Care',
     description:
       'Explore advanced robotic surgery techniques with Dr. Shabeer Ahmed in Bangalore. Experience precision, faster recovery, and minimally invasive surgical care.',
-    url: 'https://www.drshabeerahmed.in/robotic-surgeries',
+    url: 'https://drshabeerahmed.in/robotic-surgeries',
     type: 'website',
   },
   robots: {

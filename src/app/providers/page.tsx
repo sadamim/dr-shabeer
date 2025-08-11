@@ -33,13 +33,13 @@ export const metadata = {
     'Explore our expert team of gastrointestinal, bariatric & laparoscopic specialists at United Gut Healthcare. Compassionate care for all your advanced gut health needs.',
   keywords: 'Providers, Gastrointestinal Specialists, Bariatric Experts, Laparoscopic Surgeons in Bangalore',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/providers',
+    canonical: 'https://drshabeerahmed.in/providers',
   },
   openGraph: {
     title: 'Providers – Meet Our Expert Team at United Gut Healthcare.',
     description:
       'Explore our expert team of gastrointestinal, bariatric & laparoscopic specialists at United Gut Healthcare. Compassionate care for all your advanced gut health needs.',
-    url: 'https://www.drshabeerahmed.in/providers',
+    url: 'https://drshabeerahmed.in/providers',
     type: 'website',
   },
   robots: {

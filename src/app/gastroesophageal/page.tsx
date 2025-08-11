@@ -12,13 +12,13 @@ export const metadata = {
     'Get advanced Gastroesophageal Reflux Treatment in Bangalore from Dr. Shabeer Ahmed. Expert care for acid reflux, heartburn, and digestive discomfort.',
   keywords: 'Gastroesophageal Reflux Treatment in Bangalore',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/gastroesophageal',
+    canonical: 'https://drshabeerahmed.in/gastroesophageal',
   },
   openGraph: {
     title: 'Gastroesophageal Reflux Treatment in Bangalore | Dr. Ahmed',
     description:
       'Get advanced Gastroesophageal Reflux Treatment in Bangalore from Dr. Shabeer Ahmed. Expert care for acid reflux, heartburn, and digestive discomfort.',
-    url: 'https://www.drshabeerahmed.in/gastroesophageal',
+    url: 'https://drshabeerahmed.in/gastroesophageal',
     type: 'website',
   },
   robots: {

@@ -12,13 +12,13 @@ export const metadata = {
   keywords:
     'Gallbladder Surgery Specialist in Bangalore, Gallstones Treatment Bangalore, Laparoscopic Gallbladder Removal, Dr. Shabeer Ahmed Gallbladder Surgery',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/gallstones-treatments',
+    canonical: 'https://drshabeerahmed.in/gallstones-treatments',
   },
   openGraph: {
     title: 'Gallbladder Surgery Specialist in Bangalore– Dr. Shabeer Ahmed',
     description:
       'Looking for expert gallbladder surgery in Bangalore? Consult Dr. Shabeer Ahmed, a trusted specialist offering advanced laparoscopic treatment with excellent care.',
-    url: 'https://www.drshabeerahmed.in/gallstones-treatments',
+    url: 'https://drshabeerahmed.in/gallstones-treatments',
     type: 'website',
   },
   robots: {

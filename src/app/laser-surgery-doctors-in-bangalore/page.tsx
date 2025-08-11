@@ -12,13 +12,13 @@ export const metadata = {
   keywords:
     'Laser Surgery Doctors in Bangalore, Laser Treatment Bangalore, Piles Laser Surgery, Fissure Laser Treatment, Fistula Surgery Bangalore',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/laser-surgery-doctors-in-bangalore',
+    canonical: 'https://drshabeerahmed.in/laser-surgery-doctors-in-bangalore',
   },
   openGraph: {
     title: 'Laser Surgery Doctors in Bangalore | Dr. Shabeer Ahmed',
     description:
       'Consult top laser surgery doctors in Bangalore, led by Dr. Shabeer Ahmed. Advanced laser treatment options for piles, fissures, fistulas, and other anorectal conditions.',
-    url: 'https://www.drshabeerahmed.in/laser-surgery-doctors-in-bangalore',
+    url: 'https://drshabeerahmed.in/laser-surgery-doctors-in-bangalore',
     type: 'website',
   },
   robots: {

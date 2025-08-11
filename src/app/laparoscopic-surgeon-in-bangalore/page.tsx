@@ -12,13 +12,13 @@ export const metadata = {
   keywords:
     'Laparoscopic Bariatric Surgeon in Bangalore, Laparoscopic GI Surgery Bangalore, Weight Loss Surgery Bangalore, Dr. Shabeer Ahmed',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/laparoscopic-surgeon-in-bangalore',
+    canonical: 'https://drshabeerahmed.in/laparoscopic-surgeon-in-bangalore',
   },
   openGraph: {
     title: 'Laparoscopic Bariatric Surgeon in Bangalore – Dr. Shabeer Ahmed',
     description:
       'Dr. Shabeer Ahmed, expert in laparoscopic bariatric surgery in Bangalore, offers safe weight loss solutions with advanced techniques and personalized patient care.',
-    url: 'https://www.drshabeerahmed.in/laparoscopic-surgeon-in-bangalore',
+    url: 'https://drshabeerahmed.in/laparoscopic-surgeon-in-bangalore',
     type: 'website',
   },
   robots: {

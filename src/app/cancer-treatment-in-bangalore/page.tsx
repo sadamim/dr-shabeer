@@ -13,13 +13,13 @@ export const metadata = {
   keywords:
     'Liver Cancer Surgery Specialist in Bangalore, Liver Disease Specialist in Bangalore, Liver Surgery Specialist Bangalore',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/cancer-treatment-in-bangalore',
+    canonical: 'https://drshabeerahmed.in/cancer-treatment-in-bangalore',
   },
   openGraph: {
     title: 'Liver Cancer Surgery Specialist in Bangalore | Dr. Shabeer Ahmed.',
     description:
       'Consult Dr. Shabeer Ahmed, leading Liver Cancer Surgery Specialist in Bangalore, for advanced surgical care, accurate diagnosis, and personalized treatment plans.',
-    url: 'https://www.drshabeerahmed.in/cancer-treatment-in-bangalore',
+    url: 'https://drshabeerahmed.in/cancer-treatment-in-bangalore',
     type: 'website',
   },
   robots: {

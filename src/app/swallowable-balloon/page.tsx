@@ -12,13 +12,13 @@ export const metadata = {
   keywords:
     'Swallowable Gastric Balloon Bangalore, Non-surgical Weight Loss, Bariatric Treatment Bangalore, Dr Shabeer Ahmed Weight Loss',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/swallowable-balloon',
+    canonical: 'https://drshabeerahmed.in/swallowable-balloon',
   },
   openGraph: {
     title: 'Swallowable Gastric Balloon in Bangalore | Dr Shabeer Ahmed.',
     description:
       'Discover the swallowable gastric balloon option for weight loss in Bangalore with Dr Shabeer Ahmed, expert in minimally invasive bariatric treatments.',
-    url: 'https://www.drshabeerahmed.in/swallowable-balloon',
+    url: 'https://drshabeerahmed.in/swallowable-balloon',
     type: 'website',
   },
   robots: {

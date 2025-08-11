@@ -12,13 +12,13 @@ export const metadata = {
   keywords:
     'Best Doctors For Inguinal Hernia Treatment In Bangalore, Inguinal Hernia',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/inguinal-hernia',
+    canonical: 'https://drshabeerahmed.in/inguinal-hernia',
   },
   openGraph: {
     title: 'Dr. Shabeer Ahmed | Leading Hernia Repair Specialist in Bangalore',
     description:
       'Dr. Shabeer Ahmed, leading Hernia Repair Specialist in Bangalore, offers advanced laparoscopic hernia surgery with minimal downtime and personalized surgical care.',
-    url: 'https://www.drshabeerahmed.in/inguinal-hernia',
+    url: 'https://drshabeerahmed.in/inguinal-hernia',
     type: 'website',
   },
   robots: {

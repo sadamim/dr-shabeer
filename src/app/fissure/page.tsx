@@ -13,13 +13,13 @@ export const metadata = {
   keywords:
     'Fissure Treatment Bangalore, Painless Fissure Surgery, Colorectal Surgeon Bangalore, Anal Fissure Specialist, Dr. Shabeer Ahmed',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/fissure',
+    canonical: 'https://drshabeerahmed.in/fissure',
   },
   openGraph: {
     title: 'Fissure Treatment Bangalore | Expert Care by Dr. Shabeer Ahmed',
     description:
       'Fissure Treatment in Bangalore | Get Advanced, Painless Care from Renowned Colorectal Surgeon Dr. Shabeer Ahmed for Quick Relief and Long-Term Healing',
-    url: 'https://www.drshabeerahmed.in/fissure',
+    url: 'https://drshabeerahmed.in/fissure',
     type: 'website',
   },
   robots: {

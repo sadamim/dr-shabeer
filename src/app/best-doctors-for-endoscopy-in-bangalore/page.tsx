@@ -12,13 +12,13 @@ export const metadata = {
     'Discover Bangalore’s leading endoscopy experts at Dr Shabeer Ahmed’s clinic – skilled in advanced GI diagnostics, patient care, and minimally invasive procedures.',
   keywords: 'Best Endoscopy Specialists in Bangalore',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/best-doctors-for-endoscopy-in-bangalore',
+    canonical: 'https://drshabeerahmed.in/best-doctors-for-endoscopy-in-bangalore',
   },
   openGraph: {
     title: 'Best Endoscopy Specialists in Bangalore – Dr Shabeer Ahmed.',
     description:
       'Discover Bangalore’s leading endoscopy experts at Dr Shabeer Ahmed’s clinic – skilled in advanced GI diagnostics, patient care, and minimally invasive procedures.',
-    url: 'https://www.drshabeerahmed.in/best-doctors-for-endoscopy-in-bangalore',
+    url: 'https://drshabeerahmed.in/best-doctors-for-endoscopy-in-bangalore',
     type: 'website',
   },
   robots: {

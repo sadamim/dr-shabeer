@@ -12,13 +12,13 @@ export const metadata = {
   keywords:
     'Irritable Bowel Syndrome, IBS Treatment Bangalore, Digestive Disorders, Dr Shabeer Ahmed, Abdominal Pain, Bloating, GI Specialist',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/irritable',
+    canonical: 'https://drshabeerahmed.in/irritable',
   },
   openGraph: {
     title: 'Irritable Bowel Syndrome | Dr. Shabeer Ahmed',
     description:
       'Learn about Irritable Bowel Syndrome (IBS) from Dr. Shabeer Ahmed, a leading gastrointestinal specialist in Bangalore. Get expert care and effective treatment for chronic abdominal discomfort, bloating, and digestive issues.',
-    url: 'https://www.drshabeerahmed.in/irritable',
+    url: 'https://drshabeerahmed.in/irritable',
     type: 'website',
   },
   robots: {

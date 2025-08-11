@@ -135,13 +135,13 @@ export const metadata = {
   keywords:
     'Patient Testimonials, Dr Shabeer Ahmed Reels, Surgical Success Videos, Gastrointestinal Treatment Stories, Laparoscopic Care Bangalore',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/videos-reels-testimonial',
+    canonical: 'https://drshabeerahmed.in/videos-reels-testimonial',
   },
   openGraph: {
     title: 'Dr Shabeer Ahmed – Inspiring Patient Testimonials & Video Reels.',
     description:
       'Watch video testimonials and reels of Dr Shabeer Ahmed highlighting patient stories, surgical success, and expert care in gastrointestinal and laparoscopic treatment.',
-    url: 'https://www.drshabeerahmed.in/videos-reels-testimonial',
+    url: 'https://drshabeerahmed.in/videos-reels-testimonial',
     type: 'website',
   },
   robots: {

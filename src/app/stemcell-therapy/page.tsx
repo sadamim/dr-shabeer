@@ -12,13 +12,13 @@ export const metadata = {
   keywords:
     'Advanced Stem Cell Therapy in Bangalore, Regenerative Medicine, GI Stem Cell Treatment, Gastrointestinal Healing, Dr. Shabeer Ahmed Stem Cell Therapy',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/stemcell-therapy',
+    canonical: 'https://drshabeerahmed.in/stemcell-therapy',
   },
   openGraph: {
     title: 'Advanced Stem Cell Therapy in Bangalore – Dr. Shabeer Ahmed.',
     description:
       'Explore cutting-edge stem cell therapy with Dr. Shabeer Ahmed in Bangalore for regenerative treatment of gastrointestinal disorders and enhanced healing outcomes.',
-    url: 'https://www.drshabeerahmed.in/stemcell-therapy',
+    url: 'https://drshabeerahmed.in/stemcell-therapy',
     type: 'website',
   },
   robots: {

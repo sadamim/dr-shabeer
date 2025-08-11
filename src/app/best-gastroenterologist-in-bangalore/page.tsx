@@ -12,13 +12,13 @@ export const metadata = {
     'Meet the Best Gastroenterologist in Bangalore, Dr. Shabeer Ahmed. Expert in GI, bariatric & laparoscopic care, delivering trusted treatment for your digestive health.',
   keywords: 'Best Gastroenterologist in Bangalore',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/best-gastroenterologist-in-bangalore',
+    canonical: 'https://drshabeerahmed.in/best-gastroenterologist-in-bangalore',
   },
   openGraph: {
     title: 'Meet the Best Gastroenterologist in Bangalore – Dr. Shabeer Ahmed.',
     description:
       'Meet the Best Gastroenterologist in Bangalore, Dr. Shabeer Ahmed. Expert in GI, bariatric & laparoscopic care, delivering trusted treatment for your digestive health.',
-    url: 'https://www.drshabeerahmed.in/best-gastroenterologist-in-bangalore',
+    url: 'https://drshabeerahmed.in/best-gastroenterologist-in-bangalore',
     type: 'website',
   },
   robots: {

@@ -9,13 +9,13 @@ export const metadata = {
   keywords:
     'Hernia Specialist in Bangalore, Abdominal Pain Treatment Bangalore, Minimally Invasive Surgery, Dr. Shabeer Ahmed, IBS, Reflux Specialist',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/abdominal',
+    canonical: 'https://drshabeerahmed.in/abdominal',
   },
   openGraph: {
     title: 'Expert Abdominal Pain & Hernia Specialist in Bangalore, Dr. Ahmed',
     description:
       'Dr. Shabeer Ahmed provides expert diagnosis and minimally invasive treatment for abdominal pain, hernias, reflux, and IBS with compassionate, trusted care.',
-    url: 'https://www.drshabeerahmed.in/abdominal',
+    url: 'https://drshabeerahmed.in/abdominal',
     type: 'website',
   },
   robots: {

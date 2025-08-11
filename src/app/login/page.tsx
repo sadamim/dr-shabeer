@@ -4,13 +4,13 @@ export const metadata = {
     'Securely log in to manage your appointments, view medical records, and connect with Dr. Shabeer Ahmed’s team for expert gastrointestinal and surgical care.',
   keywords: 'Patient Login',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/login',
+    canonical: 'https://drshabeerahmed.in/login',
   },
   openGraph: {
     title: 'Patient Login | Access Your Health Records – Dr. Shabeer Ahmed.',
     description:
       'Securely log in to manage your appointments, view medical records, and connect with Dr. Shabeer Ahmed’s team for expert gastrointestinal and surgical care.',
-    url: 'https://www.drshabeerahmed.in/login',
+    url: 'https://drshabeerahmed.in/login',
     type: 'website',
   },
   robots: {

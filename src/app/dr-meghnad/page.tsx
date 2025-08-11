@@ -23,12 +23,12 @@ export default function About() {
                 <meta name="keywords" content={metadata.keywords} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="robots" content="index, follow" />
-                <link rel="canonical" href="https://www.drshabeerahmed.com/aboutus" />
+                <link rel="canonical" href="https://drshabeerahmed.in/aboutus" />
                 {/* Open Graph / Social Media SEO */}
                 <meta property="og:title" content={metadata.title} />
                 <meta property="og:description" content={metadata.description} />
                 <meta property="og:image" content="/img/seo/dr-shabeer-ahmed-about.jpg" />
-                <meta property="og:url" content="https://www.drshabeerahmed.com/aboutus" />
+                <meta property="og:url" content="https://drshabeerahmed.in/aboutus" />
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="Dr. Meghnad G. Joshi Clinic" />
             </Head>

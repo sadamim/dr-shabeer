@@ -12,13 +12,13 @@ export const metadata = {
   keywords:
     'Hernia Repair Specialist Bangalore, Hiatal Hernia Surgery Bangalore, Hernia Repair Surgery Bangalore, Best Hernia Surgeon Bangalore',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/incisional-hernia',
+    canonical: 'https://drshabeerahmed.in/incisional-hernia',
   },
   openGraph: {
     title: 'Best Hernia Surgeon in Bangalore | Dr. Shabeer Ahmed Expert Care.',
     description:
       'Consult Dr. Shabeer Ahmed, the Best Hernia Surgeon in Bangalore, for expert laparoscopic hernia surgery, personalized care, and advanced minimally invasive treatment.',
-    url: 'https://www.drshabeerahmed.in/incisional-hernia',
+    url: 'https://drshabeerahmed.in/incisional-hernia',
     type: 'website',
   },
   robots: {

@@ -12,13 +12,13 @@ export const metadata = {
   keywords:
     'Gut Health Specialist in Bangalore, Best Gut Health Specialist Bangalore, Gut Health Nutritionist and Consultant in Bangalore, Gut Health Nutritionist Bangalore',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/gut-health-specialis-in-bangalore',
+    canonical: 'https://drshabeerahmed.in/gut-health-specialis-in-bangalore',
   },
   openGraph: {
     title: 'The Best Gut Health Specialist in Bangalore | Dr. Shabeer Ahmed.',
     description:
       'Consult the leading Gut Health Specialist in Bangalore, Dr. Shabeer Ahmed, for expert care in gastrointestinal wellness, digestive issues, and advanced treatments.',
-    url: 'https://www.drshabeerahmed.in/gut-health-specialis-in-bangalore',
+    url: 'https://drshabeerahmed.in/gut-health-specialis-in-bangalore',
     type: 'website',
   },
   robots: {

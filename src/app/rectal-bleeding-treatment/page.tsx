@@ -12,13 +12,13 @@ export const metadata = {
   keywords:
     'Rectal Bleeding Treatment Bangalore, Piles Specialist, Fissure Treatment Bangalore, Colorectal Surgeon, Dr Shabeer Ahmed',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/rectal-bleeding-treatment',
+    canonical: 'https://drshabeerahmed.in/rectal-bleeding-treatment',
   },
   openGraph: {
     title: 'Rectal Bleeding Treatment in Bangalore – Dr. Shabeer Ahmed',
     description:
       'Consult Dr. Shabeer Ahmed for expert diagnosis and advanced treatment of rectal bleeding in Bangalore. Specialized care for piles, fissures, and colorectal issues.',
-    url: 'https://www.drshabeerahmed.in/rectal-bleeding-treatment',
+    url: 'https://drshabeerahmed.in/rectal-bleeding-treatment',
     type: 'website',
   },
   robots: {

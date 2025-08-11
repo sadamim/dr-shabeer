@@ -13,13 +13,13 @@ export const metadata = {
   keywords:
     'Piles Treatment in Bangalore, Laser Piles Surgery Bangalore, Hemorrhoid Specialist, Dr. Shabeer Ahmed, Minimally Invasive Piles Treatment',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/piles-treatment-in-bangalore',
+    canonical: 'https://drshabeerahmed.in/piles-treatment-in-bangalore',
   },
   openGraph: {
     title: 'Piles Treatment in Bangalore | Dr. Shabeer Ahmed – Expert Care',
     description:
       'Get advanced piles treatment in Bangalore with Dr. Shabeer Ahmed. Expert in laser & minimally invasive techniques for fast recovery, comfort, and long-term relief.',
-    url: 'https://www.drshabeerahmed.in/piles-treatment-in-bangalore',
+    url: 'https://drshabeerahmed.in/piles-treatment-in-bangalore',
     type: 'website',
   },
   robots: {

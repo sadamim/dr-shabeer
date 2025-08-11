@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   keywords: 'dr shabeer ahmed contact, contact bariatric surgeon, contact gi surgeon, contact weight loss doctor, contact Bangalore',
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.com/contact',
+    canonical: 'https://drshabeerahmed.in/contact',
   },
   openGraph: {
     title: 'Contact Dr. Shabeer Ahmed - Gastrointestinal & Bariatric Surgeon | Bangalore',
     description: 'Reach out to Dr. Shabeer Ahmed for advanced GI, Laparoscopic, and Bariatric Surgery consultations in Bangalore.',
-    url: 'https://www.drshabeerahmed.com/contact',
+    url: 'https://drshabeerahmed.in/contact',
     type: 'website',
     siteName: 'Dr Shabeer Ahmed Clinic',
     images: [

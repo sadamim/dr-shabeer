@@ -10,13 +10,13 @@ export const metadata = {
   keywords:
     'Top Gastroenterology Doctor in Bangalore, Gastrointestinal Surgery Specialist in Bangalore, Gastroesophageal Reflux Treatment Bangalore',
   alternates: {
-    canonical: 'https://www.drshabeerahmed.in/aboutus',
+    canonical: 'https://drshabeerahmed.in/aboutus',
   },
   openGraph: {
     title: 'Dr. Shabeer Ahmed | About Us – Expert in Gastro & Bariatric Care.',
     description:
       'Learn about Dr. Shabeer Ahmed, a renowned specialist in gastrointestinal and bariatric surgery in Bangalore, committed to excellence and compassionate patient care.',
-    url: 'https://www.drshabeerahmed.in/aboutus',
+    url: 'https://drshabeerahmed.in/aboutus',
     type: 'profile',
   },
   robots: {
