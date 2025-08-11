@@ -11,7 +11,10 @@ export const metadata = {
     description:
         "Find expert liver disease treatment in Bangalore. Learn about symptoms, causes, and advanced medical & surgical care for liver conditions by Dr. Shabeer Ahmed.",
     keywords:
-        "liver disease specialist bangalore, dr shabeer ahmed, liver surgery, fatty liver, hepatitis, cirrhosis, bariatric surgeon, gastrointestinal surgeon"
+        "liver disease specialist bangalore, dr shabeer ahmed, liver surgery, fatty liver, hepatitis, cirrhosis, bariatric surgeon, gastrointestinal surgeon",
+        alternates: {
+    canonical: 'https://drshabeerahmed.in/liver-disease-specialist-in-bangalore',
+  },
 };
 
 export default function LiverDiseasePage() {

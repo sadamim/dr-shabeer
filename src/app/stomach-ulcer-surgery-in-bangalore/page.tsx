@@ -11,7 +11,10 @@ export const metadata = {
     description:
         "Understand stomach ulcer causes, symptoms, and surgical treatment options like laparoscopic surgery for severe cases in Bangalore.",
     keywords:
-        "stomach ulcer surgery, gastric ulcer treatment, laparoscopic ulcer repair, H. pylori infection, Bangalore"
+        "stomach ulcer surgery, gastric ulcer treatment, laparoscopic ulcer repair, H. pylori infection, Bangalore",
+         alternates: {
+    canonical: 'https://drshabeerahmed.in/stomach-ulcer-surgery-in-bangalore',
+  },
 };
 
 export default function StomachUlcerSurgeryPage() {
