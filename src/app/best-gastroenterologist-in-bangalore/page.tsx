@@ -9,7 +9,7 @@ import FaqSection from '@/components/FaqSection';
 export const metadata = {
   title: 'Best Gastroenterologist In Bangalore | Gastroenterology Specialist',
   description:
-    'Best Gastroenterologist In Bangalore | Gastroenterology Specialist. Expert in GI, bariatric & laparoscopic care, delivering trusted treatment for your digestive health.',
+    'Consult Dr Shabeer Ahmed, Best Gastroenterologist in Bangalore, a Top Gastroenterology Doctor and Surgical Gastroenterologist Specialist you can trust.',
   keywords: 'Best Gastroenterologist in Bangalore',
   alternates: {
     canonical: 'https://drshabeerahmed.in/best-gastroenterologist-in-bangalore',
@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     title: 'Best Gastroenterologist In Bangalore | Gastroenterology Specialist',
     description:
-      'Best Gastroenterologist In Bangalore | Gastroenterology Specialist. Expert in GI, bariatric & laparoscopic care, delivering trusted treatment for your digestive health.',
+      'Consult Dr Shabeer Ahmed, Best Gastroenterologist in Bangalore, a Top Gastroenterology Doctor and Surgical Gastroenterologist Specialist you can trust.',
     url: 'https://drshabeerahmed.in/best-gastroenterologist-in-bangalore',
     type: 'website',
   },
