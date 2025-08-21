@@ -26,7 +26,7 @@ const items = [
     { img: '/img/icons/Surgery For 1.webp', alt: 'Surgery For Cancers', title: 'Surgery For Cancers', link: 'cancer-treatment-in-bangalore' },
     { img: '/img/icons/stem cell small size.webp', alt: 'Stem Cell Therapy', title: 'Stem Cell Therapy', link: 'stemcell-therapy' },
     { img: '/img/icons/Robotic Surgery.webp', alt: 'Robotic Surgery', title: 'Robotic Surgery', link: 'robotic-surgeries' },
-    { img: '/img/icons/Gallstones.webp', alt: 'Gallstones', title: 'Gallstones', link: 'gallstones-treatments' },
+    { img: '/img/icons/Gallstones.webp', alt: 'Gallstones', title: 'Gallstones', link: 'Gallbladder-Surgery-Bangalore' },
     { img: '/img/icons/piles.webp', alt: 'Piles', title: 'Piles', link: 'piles-treatment-in-bangalore' },
     { img: '/img/icons/Reflux Disease.webp', alt: 'Gastroesophageal Reflux Disease', title: 'Gastroesophageal Reflux Disease', link: 'gastroesophageal' },
     { img: '/img/icons/Laparoscopic.svg', alt: 'Laparoscopic', title: 'Laparoscopic', link: 'laparoscopic-surgeon-in-bangalore' },
