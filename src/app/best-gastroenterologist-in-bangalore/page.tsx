@@ -7,7 +7,7 @@ import BreadcrumbBanner from '@/components/BreadcrumbBanner';
 import FaqSection from '@/components/FaqSection';
 
 export const metadata = {
-  title: 'Best Gastroenterologist In Bangalore | Gastroenterology Specialist',
+  title: 'Best Gastroenterologist In Bangalore | Dr Shabeer Ahmed',
   description:
     'Consult Dr Shabeer Ahmed, Best Gastroenterologist in Bangalore, a Top Gastroenterology Doctor and Surgical Gastroenterologist Specialist you can trust.',
   keywords: 'Best Gastroenterologist in Bangalore',
@@ -15,7 +15,7 @@ export const metadata = {
     canonical: 'https://drshabeerahmed.in/best-gastroenterologist-in-bangalore',
   },
   openGraph: {
-    title: 'Best Gastroenterologist In Bangalore | Gastroenterology Specialist',
+    title: 'Best Gastroenterologist In Bangalore | Dr Shabeer Ahmed',
     description:
       'Consult Dr Shabeer Ahmed, Best Gastroenterologist in Bangalore, a Top Gastroenterology Doctor and Surgical Gastroenterologist Specialist you can trust.',
     url: 'https://drshabeerahmed.in/best-gastroenterologist-in-bangalore',

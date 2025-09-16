@@ -7,7 +7,7 @@ type FAQ = {
 };
 
 interface FAQSectionProps {
-  faqs: FAQ[]; // ✅ Receive FAQ list from parent
+  faqs?: FAQ[];  // <- make it optional
 }
 const faqsData = [
   {
