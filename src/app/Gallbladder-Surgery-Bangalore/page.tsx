@@ -27,6 +27,28 @@ export const metadata = {
   },
 };
 
+const faqsData = [
+  {
+    question: '1. When should I consult a gallbladder surgery specialist in Bangalore?',
+    answer:
+      'If you experience pain, nausea, or digestive issues due to gallstones, a specialist can evaluate and recommend surgery.',
+  },
+  {
+    question: '2. What procedures are available for gallbladder surgery?',
+    answer:
+      'Laparoscopic cholecystectomy is the most common and minimally invasive option.',
+  },
+  {
+    question: '3. Is gallbladder surgery risky?',
+    answer:
+      'With experienced specialists, the risks are minimal and the recovery is faster compared to traditional surgery.',
+  },
+  {
+    question: '4. Can gallstones be treated without surgery?',
+    answer:
+      'In some cases, medications or lifestyle changes are recommended, but surgery is often the definitive treatment.',
+  },
+];
 
 export default function GallstonesPage() {
     return (
@@ -128,7 +150,7 @@ export default function GallstonesPage() {
             </Container>
 
             {/* FAQ Section */}
-            <FaqSection />
+            <FaqSection faqs={faqsData}/>
         </>
     );
 }

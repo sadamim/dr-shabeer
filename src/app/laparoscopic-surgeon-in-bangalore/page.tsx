@@ -26,6 +26,28 @@ export const metadata = {
     follow: true,
   },
 };
+const faqsData = [
+  {
+    question: '1. What is laparoscopic bariatric surgery?',
+    answer:
+      'It is a minimally invasive procedure to help with weight loss by reducing stomach size and altering digestion.',
+  },
+  {
+    question: '2. Is laparoscopic bariatric surgery safe in Bangalore?',
+    answer:
+      'Yes, with experienced surgeons like Dr. Shabeer Ahmed, it is a safe and effective option for treating obesity.',
+  },
+  {
+    question: '3. Who qualifies for laparoscopic bariatric surgery?',
+    answer:
+      'Individuals with a BMI above 35 or those with obesity-related health conditions are suitable candidates.',
+  },
+  {
+    question: '4. What is the recovery time after this surgery?',
+    answer:
+      'Most patients recover within a few weeks with proper care and follow-up.',
+  },
+];
 
 
 export default function LaparoscopicPage() {
@@ -116,7 +138,7 @@ export default function LaparoscopicPage() {
             </Container>
 
             {/* FAQ Section */}
-            <FaqSection />
+            <FaqSection faqs={faqsData}/>
         </>
     );
 }

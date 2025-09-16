@@ -26,6 +26,28 @@ export const metadata = {
     follow: true,
   },
 };
+const faqsData = [
+  {
+    question: '1. What is an inguinal hernia and how is it treated?',
+    answer:
+      'An inguinal hernia is a bulge in the groin area, treated effectively with surgical repair by specialists.',
+  },
+  {
+    question: '2. Why should I consult a hernia repair specialist in Bangalore?',
+    answer:
+      'Experienced surgeons ensure safe, minimally invasive procedures and faster recovery.',
+  },
+  {
+    question: '3. Is hernia surgery painful?',
+    answer:
+      'Modern techniques, including laparoscopic repair, significantly reduce pain and hospital stay.',
+  },
+  {
+    question: '4. Can hernias reoccur after surgery?',
+    answer:
+      'With proper care and follow-up, recurrence is rare but monitoring is recommended.',
+  },
+];
 
 
 export default function InguinalHerniaPage() {
@@ -141,7 +163,7 @@ export default function InguinalHerniaPage() {
             </Container>
 
             {/* FAQ Section */}
-            <FaqSection />
+            <FaqSection faqs={faqsData}/>
         </>
     );
 }

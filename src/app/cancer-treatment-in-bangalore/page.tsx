@@ -28,6 +28,30 @@ export const metadata = {
   },
 };
 
+const faqsData = [
+  {
+    question: '1. When should I consult a liver cancer surgery specialist in Bangalore?',
+    answer:
+      'If you have liver lesions, unexplained pain, or abnormal test results, a specialist can guide diagnosis and treatment.',
+  },
+  {
+    question: '2. What surgical options are available for liver cancer?',
+    answer:
+      'Resection, transplantation, or minimally invasive surgery are options depending on cancer stage and liver function.',
+  },
+  {
+    question: '3. Is liver cancer surgery risky?',
+    answer:
+      'It involves complexities, but with experienced surgeons, outcomes and recovery are significantly improved.',
+  },
+  {
+    question: '4. Can liver cancer be treated without surgery?',
+    answer:
+      'Other options include chemotherapy, targeted therapy, or radiation, but surgery remains a key treatment for eligible patients.',
+  },
+];
+
+
 export default function SurgeryForCancersPage() {
     return (
         <>
@@ -152,7 +176,7 @@ export default function SurgeryForCancersPage() {
             </Container>
 
             {/* FAQ Section */}
-            <FAQSection />
+            <FAQSection faqs={faqsData}/>
         </>
     );
 }

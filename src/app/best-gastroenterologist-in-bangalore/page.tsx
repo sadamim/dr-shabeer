@@ -27,6 +27,29 @@ export const metadata = {
   },
 };
 
+const faqsData = [
+  {
+    question: '1. Who is considered the best gastroenterologist in Bangalore?',
+    answer:
+      'The best gastroenterologist in Bangalore is one with extensive experience in diagnosing and treating digestive disorders, advanced procedures, and patient-centered care. Dr. Shabeer Ahmed is highly recommended for his expertise.',
+  },
+  {
+    question: '2. What conditions does a top gastroenterologist treat?',
+    answer:
+      'They treat conditions such as GERD, IBS, liver diseases, ulcers, infections, and gastrointestinal cancers.',
+  },
+  {
+    question: '3. How do I choose the best gastroenterologist in Bangalore?',
+    answer:
+      'Look for qualifications, years of experience, patient reviews, hospital affiliations, and the range of treatments offered.',
+  },
+  {
+    question: '4. Does the best gastroenterologist offer advanced diagnostic tests?',
+    answer:
+      'Yes, a leading specialist provides endoscopy, colonoscopy, liver function tests, and imaging to ensure accurate diagnosis.',
+  },
+];
+
 
 export default function BestGastroPage() {
   return (
@@ -111,8 +134,7 @@ export default function BestGastroPage() {
       </Container>
 
       {/* FAQ Section */}
-      <FaqSection
-       />
+      <FaqSection faqs={faqsData}/>
     </>
   );
 }

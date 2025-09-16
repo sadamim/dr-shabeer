@@ -17,6 +17,30 @@ export const metadata = {
   },
 };
 
+const faqsData = [
+  {
+    question: '1. What causes stomach ulcers?',
+    answer:
+      'Factors include H. pylori infection, stress, alcohol, smoking, and prolonged medication use.',
+  },
+  {
+    question: '2. What treatments are available for stomach ulcers in Bangalore?',
+    answer:
+      'Treatment includes medications, dietary changes, and in severe cases, surgery by expert specialists.',
+  },
+  {
+    question: '3. How is stomach ulcer surgery performed?',
+    answer:
+      'Minimally invasive procedures are used to remove or repair ulcerated areas while promoting healing.',
+  },
+  {
+    question: '4. Can stomach ulcers be fully cured?',
+    answer:
+      'Yes, with proper treatment and lifestyle adjustments, ulcers can heal and symptoms can be controlled.',
+  },
+];
+
+
 export default function StomachUlcerSurgeryPage() {
     return (
         <>
@@ -181,7 +205,7 @@ export default function StomachUlcerSurgeryPage() {
             </Container>
 
             {/* FAQ Section */}
-            <FaqSection />
+            <FaqSection faqs={faqsData}/>
         </>
     );
 }

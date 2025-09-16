@@ -17,6 +17,31 @@ export const metadata = {
   },
 };
 
+
+const faqsData = [
+  {
+    question: '1. What liver diseases are treated by specialists in Bangalore?',
+    answer:
+      'Conditions such as hepatitis, fatty liver disease, cirrhosis, and liver failure are treated.',
+  },
+  {
+    question: '2. How is liver disease diagnosed?',
+    answer:
+      'Through blood tests, imaging scans, biopsies, and clinical assessments.',
+  },
+  {
+    question: '3. Can liver disease be reversed?',
+    answer:
+      'Early-stage diseases like fatty liver can be managed or reversed with proper treatment and lifestyle changes.',
+  },
+  {
+    question: '4. Why consult a liver disease specialist?',
+    answer:
+      'They offer expert care, advanced diagnostics, and treatment plans tailored to prevent complications.',
+  },
+];
+
+
 export default function LiverDiseasePage() {
     return (
         <>
@@ -147,7 +172,7 @@ export default function LiverDiseasePage() {
             </Container>
 
             {/* FAQ Section */}
-            <FaqSection />
+            <FaqSection faqs={faqsData}/>
         </>
     );
 }

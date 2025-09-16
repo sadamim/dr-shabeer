@@ -28,6 +28,30 @@ export const metadata = {
   },
 };
 
+const faqsData = [
+  {
+    question: '1. What types of weight loss surgery are available in Bangalore?',
+    answer:
+      'Options include gastric bypass, sleeve gastrectomy, and adjustable gastric banding, depending on patient needs.',
+  },
+  {
+    question: '2. How do I know if I need weight loss surgery in Bangalore?',
+    answer:
+      'A consultation with a specialist helps determine if surgery is the best approach based on BMI, health risks, and lifestyle factors.',
+  },
+  {
+    question: '3. Is weight loss surgery permanent?',
+    answer:
+      'Surgery provides long-term results when combined with a healthy diet and regular exercise.',
+  },
+  {
+    question: '4. What support is provided post-surgery in Bangalore?',
+    answer:
+      'Nutritional counseling, follow-up care, and lifestyle coaching are part of comprehensive post-surgery management.',
+  },
+];
+
+
 
 export default function WeightLossSurgeonPage() {
     return (
@@ -207,7 +231,7 @@ export default function WeightLossSurgeonPage() {
             </Container>
 
             {/* FAQ Section */}
-            <FaqSection />
+            <FaqSection faqs={faqsData}/>
         </>
     );
 }

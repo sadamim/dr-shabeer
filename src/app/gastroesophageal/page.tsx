@@ -26,6 +26,28 @@ export const metadata = {
     follow: true,
   },
 };
+const faqsData = [
+  {
+    question: '1. What is the best treatment for gastroesophageal reflux in Bangalore?',
+    answer:
+      'Effective treatment includes lifestyle modifications, medications, and advanced procedures provided by experts like Dr. Shabeer Ahmed.',
+  },
+  {
+    question: '2. How is GERD diagnosed by specialists in Bangalore?',
+    answer:
+      'GERD is diagnosed using endoscopy, pH monitoring, manometry, and clinical evaluation.',
+  },
+  {
+    question: '3. Are surgical options available for GERD treatment in Bangalore?',
+    answer:
+      'Yes, minimally invasive surgeries and other advanced procedures are available for severe cases.',
+  },
+  {
+    question: '4. Can lifestyle changes help manage GERD?',
+    answer:
+      'Absolutely. Diet, weight management, and avoiding triggers like alcohol and spicy foods play a crucial role.',
+  },
+];
 
 export default function GastroesophagealPage() {
     return (
@@ -161,7 +183,7 @@ export default function GastroesophagealPage() {
             </Container>
 
             {/* FAQ Section */}
-            <FaqSection />
+            <FaqSection faqs={faqsData}/>
         </>
     );
 }

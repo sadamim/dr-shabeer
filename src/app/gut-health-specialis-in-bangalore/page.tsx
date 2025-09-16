@@ -27,6 +27,30 @@ export const metadata = {
   },
 };
 
+const faqsData = [
+  {
+    question: '1. What conditions does a gut health specialist treat in Bangalore?',
+    answer:
+      'They manage IBS, infections, malabsorption, inflammatory diseases, and digestive discomfort.',
+  },
+  {
+    question: '2. How can I improve gut health?',
+    answer:
+      'A specialist recommends diet changes, probiotics, stress management, and medications to balance gut flora.',
+  },
+  {
+    question: '3. When should I see a gut health specialist?',
+    answer:
+      'Persistent bloating, cramps, diarrhea, or unexplained weight loss are reasons to seek expert care.',
+  },
+  {
+    question: '4. Do gut health specialists provide customized treatments?',
+    answer:
+      'Yes, they offer personalized care based on symptoms, test results, and lifestyle factors.',
+  },
+];
+
+
 
 export default function GutCarePage() {
     return (
@@ -133,7 +157,7 @@ export default function GutCarePage() {
             </Container>
 
             {/* FAQ Section */}
-            <FaqSection />
+            <FaqSection faqs={faqsData}/>
         </>
     );
 }
