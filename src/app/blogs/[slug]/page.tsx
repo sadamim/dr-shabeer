@@ -50,6 +50,10 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
                 images: [post.imageUrl],
             },
             keywords: post.metaKeywords?.split(',') || ['health', 'gastro', 'blog'],
+            // ✅ Add canonical URL here
+            alternates: {
+                canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/blog/${post.slug}`,
+            },
         };
     } catch (error) {
         return {
