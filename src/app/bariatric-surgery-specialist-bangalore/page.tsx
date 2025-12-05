@@ -153,7 +153,7 @@ export default function BariatricSurgery() {
             </Container>
 
             {/* FAQ Section */}
-            <FaqSection />
+            {/* <FaqSection /> */}
         </>
     );
 }
