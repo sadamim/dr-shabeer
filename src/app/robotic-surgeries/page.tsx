@@ -34,7 +34,7 @@ export default function RoboticSurgeryPage() {
             {/* Banner Section */}
             <BariatricBanner
                 title="Robotic Surgery"
-                imageSrc="/img/bannerslider/Robotic Surgery 2.webp"
+                imageSrc="/img/bannerslider/Robostic_banner.png"
             />
 
             {/* Main Content */}
@@ -44,7 +44,7 @@ export default function RoboticSurgeryPage() {
                     {/* Image Section */}
                     <Col lg={4} md={4} className="mb-4 d-flex justify-content-center">
                         <Image
-                            src="/img/bannerslider/Stem Cell Therapy.webp"
+                            src="/img/bannerslider/Robostic.png"
                             alt="Robotic Surgery"
                             width={400}
                             height={300}
