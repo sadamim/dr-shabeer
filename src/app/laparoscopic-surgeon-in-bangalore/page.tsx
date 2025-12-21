@@ -58,7 +58,7 @@ export default function LaparoscopicPage() {
             {/* Banner Section */}
             <BariatricBanner
                 title="Laparoscopic Surgery"
-                imageSrc="/img/bannerslider/laroscopic 2.webp"
+                imageSrc="/img/bannerslider/Laparoscopic Surgery banner.png"
             />
 
             {/* Main Content */}
@@ -68,7 +68,7 @@ export default function LaparoscopicPage() {
                     {/* Image Section */}
                     <Col lg={4} md={4} className="mb-4 d-flex justify-content-center">
                         <Image
-                            src="/img/icons/Robotic Surgery.webp"
+                            src="/img/bannerslider/Laparoscopic Surgery.png"
                             alt="Laparoscopic Surgery"
                             width={400}
                             height={300}

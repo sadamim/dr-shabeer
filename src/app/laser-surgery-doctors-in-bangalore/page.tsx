@@ -38,7 +38,7 @@ export default function LaserSurgeryPage() {
             {/* Banner Section */}
             <BariatricBanner
                 title="Laser Surgery"
-                imageSrc="/img/bannerslider/Laparoscopic Surgery banner.png"
+                imageSrc="/img/bannerslider/laser surgery 2.webp"
             />
 
             {/* Main Content */}
@@ -48,7 +48,7 @@ export default function LaserSurgeryPage() {
                     {/* Image Section */}
                     <Col lg={4} md={4} className="mb-4 d-flex justify-content-center">
                         <Image
-                            src="/img/bannerslider/Laparoscopic Surgery.png"
+                            src="/img/bannerslider/Surgery for cancer.webp"
                             alt="Laser Surgery"
                             width={400}
                             height={300}

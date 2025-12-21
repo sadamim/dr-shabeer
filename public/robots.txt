@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.teknixelevators.com/sitemap.xml
+Sitemap: https://drshabeerahmed.in/sitemap.xml
