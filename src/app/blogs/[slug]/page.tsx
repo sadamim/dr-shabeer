@@ -79,7 +79,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
                     imageSrc="/img/bannerslider/Diarrhea BANNER.webp"
                 />
                 <div className="container my-5">
-                    <h1 className="text-3xl font-bold mb-4 d-none">{post.title}</h1>
+                   
                     <img
                         src={post.imageUrl}
                         alt={post.title}
