@@ -1,4 +1,4 @@
-// src/app/blog/[slug]/page.tsx
+// src/app/blogs/[slug]/page.tsx
 import { notFound } from 'next/navigation';
 import axios from 'axios';
 import { Metadata } from 'next';
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
             openGraph: {
                 title: post.metaTitle || post.title,
                 description: post.metaDescription || post.content.substring(0, 160),
-                url: `${process.env.NEXT_PUBLIC_SITE_URL}/blog/${post.slug}`,
+                url: `${process.env.NEXT_PUBLIC_SITE_URL}/blogs/${post.slug}`,
                 siteName: "Dr. Shabeer Ahmed | Gastroenterologist",
                 images: [
                     {
@@ -52,7 +52,11 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
             keywords: post.metaKeywords?.split(',') || ['health', 'gastro', 'blog'],
             // ✅ Add canonical URL here
             alternates: {
-                canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/blog/${post.slug}`,
+                canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/blogs/${post.slug}`,
+            },
+            robots: {
+                index: true,
+                follow: true,
             },
         };
     } catch (error) {
