@@ -150,7 +150,48 @@ export default function SurgeryForCancersPage() {
                             <li><strong>Reduced Recurrence Rates:</strong> Especially for fistulas.</li>
                         </ul>
 
-                        {/* Procedure and Recovery */}
+                        {/* Procedure and Approximate Cost */}
+                        <h5 className="mt-4">Procedure and Approximate Cost</h5>
+                        <div className="table-responsive">
+                            <table className="table table-bordered align-middle">
+                                <thead className="table-light">
+                                    <tr>
+                                        <th>Procedure</th>
+                                        <th>Approximate Cost (INR)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Laser Hemorrhoidoplasty (LHP)</td>
+                                        <td>₹35,000 – ₹55,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Laser treatment for Anal Fissures (LASER LIS)</td>
+                                        <td>₹25,000 – ₹40,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Laser Fistula Treatment (LAFT / FILAC / VAAFT)</td>
+                                        <td>₹45,000 – ₹70,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pilonidal Sinus Laser Ablation</td>
+                                        <td>₹30,000 – ₹50,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Laser Removal of Anal Warts</td>
+                                        <td>₹15,000 – ₹35,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Laser Polypectomy for Rectal Polyps</td>
+                                        <td>₹20,000 – ₹45,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p className="small text-muted">
+                            Note: These are approximate cost ranges. Final pricing depends on the patient’s condition, choice of hospital, and the exact treatment plan.
+                        </p>
+
                         <h5 className="mt-4">Procedure and Recovery</h5>
                         <ul>
                             <li><strong>Pre-procedure:</strong> Diagnostic tests and bowel prep.</li>

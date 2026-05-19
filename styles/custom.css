@@ -64114,3 +64114,228 @@ li strong {
   margin-right:   30% !important;
 }
 
+/* Estimated Cost Overview Table Styling */
+.container .mt-4 table,
+.container .mt-4 .cost-overview-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #ffffff;
+  border: 1px solid #000000;
+}
+
+.container .mt-4 table thead,
+.container .mt-4 .cost-overview-table thead {
+  background: #ffffff;
+  color: #000000;
+}
+
+.container .mt-4 table th,
+.container .mt-4 .cost-overview-table th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid #000000;
+  background: #ffffff;
+}
+
+.container .mt-4 table td,
+.container .mt-4 .cost-overview-table td {
+  padding: 12px 15px;
+  border: 1px solid #000000;
+  font-size: 14px;
+  color: #000000;
+  background: #ffffff;
+}
+
+.container .mt-4 table td:hover,
+.container .mt-4 .cost-overview-table td:hover {
+  background: #ffffff;
+}
+
+.container .mt-4 table tbody tr:hover,
+.container .mt-4 .cost-overview-table tbody tr:hover {
+  background-color: #ffffff;
+}
+
+.container .mt-4 table tbody tr:hover td,
+.container .mt-4 .cost-overview-table tbody tr:hover td {
+  background: #ffffff;
+}
+
+.container .mt-4 table tbody tr:last-child td,
+.container .mt-4 .cost-overview-table tbody tr:last-child td {
+  border-bottom: 1px solid #000000;
+}
+
+/* Table alignment classes */
+.container .mt-4 table.align-left,
+.container .mt-4 .cost-overview-table.align-left {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.container .mt-4 table.align-center,
+.container .mt-4 .cost-overview-table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container .mt-4 table.align-right,
+.container .mt-4 .cost-overview-table.align-right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Style cost overview lists as tables */
+.container .mt-4 ul.cost-list,
+.container .mt-4 .cost-overview-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.container .mt-4 ul.cost-list li,
+.container .mt-4 .cost-overview-list li {
+  display: table-row;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.container .mt-4 ul.cost-list li:first-child,
+.container .mt-4 .cost-overview-list li:first-child {
+  background: #085583;
+  color: #fff;
+  font-weight: 600;
+}
+
+.container .mt-4 ul.cost-list li:first-child span,
+.container .mt-4 .cost-overview-list li:first-child span {
+  color: #fff;
+  font-weight: 600;
+}
+
+.container .mt-4 ul.cost-list li span,
+.container .mt-4 .cost-overview-list li span {
+  display: table-cell;
+  padding: 12px 15px;
+  border-right: 1px solid #e2e8f0;
+}
+
+.container .mt-4 ul.cost-list li span:first-child,
+.container .mt-4 .cost-overview-list li span:first-child {
+  width: 70%;
+  font-weight: 500;
+}
+
+.container .mt-4 ul.cost-list li span:last-child,
+.container .mt-4 .cost-overview-list li span:last-child {
+  width: 30%;
+  text-align: right;
+  border-right: none;
+  font-weight: 600;
+  color: #085583;
+}
+
+.container .mt-4 ul.cost-list li:last-child,
+.container .mt-4 .cost-overview-list li:last-child {
+  border-bottom: none;
+}
+
+/* TipTap Editor Table Styling */
+.tipTapEditor table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #000000;
+}
+
+.tipTapEditor table td,
+.tipTapEditor table th {
+  min-width: 1em;
+  border: 1px solid #000000;
+  padding: 3px 5px;
+  vertical-align: top;
+  box-sizing: border-box;
+  position: relative;
+  background: #ffffff !important;
+  color: #000000;
+}
+
+.tipTapEditor table td:hover,
+.tipTapEditor table th:hover {
+  background: #ffffff !important;
+}
+
+.tipTapEditor table th {
+  font-weight: bold;
+  text-align: left;
+  background-color: #ffffff !important;
+  color: #000000;
+}
+
+.tipTapEditor table tbody tr:hover {
+  background-color: #ffffff !important;
+}
+
+.tipTapEditor table tbody tr:hover td {
+  background: #ffffff !important;
+}
+
+.tipTapEditor table .selectedCell:after {
+  z-index: 2;
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: transparent !important;
+  pointer-events: none;
+}
+
+.tipTapEditor table .column-resize-handle {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: -2px;
+  width: 4px;
+  background-color: #adf;
+  pointer-events: none;
+}
+
+.tipTapEditor .tableWrapper {
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+.tipTapEditor p {
+  margin: 0;
+}
+
+/* TipTap editor table alignment */
+.tipTapEditor table.align-left {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.tipTapEditor table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tipTapEditor table.align-right {
+  margin-left: auto;
+  margin-right: 0;
+}
+

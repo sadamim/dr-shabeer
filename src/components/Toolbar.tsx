@@ -3,13 +3,18 @@
 
 import {
     FaListUl,
-    FaListOl
+    FaListOl,
+    FaAlignLeft,
+    FaAlignCenter,
+    FaAlignRight
 } from 'react-icons/fa'
+import { FaLink } from 'react-icons/fa'
 import {
     RxFontBold,
     RxFontItalic,
     RxStrikethrough
 } from 'react-icons/rx'
+import { FaTable } from 'react-icons/fa'
 import React from 'react'
 
 interface Props {
@@ -46,6 +51,23 @@ export default function Toolbar({ editor }: Props) {
                 title="Strike Through"
             >
                 <RxStrikethrough size={18} />
+            </button>
+
+            <button
+                type="button"
+                onClick={() => {
+                    if (editor.isActive('link')) {
+                        editor.chain().focus().unsetLink().run()
+                        return
+                    }
+                    const url = window.prompt('Enter the URL')
+                    if (!url) return
+                    editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run()
+                }}
+                className={`p-2 rounded hover:bg-gray-200 ${editor.isActive('link') ? 'bg-gray-200' : ''}`}
+                title="Insert Link"
+            >
+                <FaLink />
             </button>
 
             <button
@@ -119,6 +141,148 @@ export default function Toolbar({ editor }: Props) {
             >
                 <span>↪</span>
             </button>
+
+            <div className="border-l pl-2 ml-2">
+                <button
+                    type="button"
+                    onClick={() => editor.chain().focus().insertTable({ rows: 3, cols: 2, withHeaderRow: true }).run()}
+                    className="p-2 rounded hover:bg-gray-200"
+                    title="Insert Table"
+                >
+                    <FaTable />
+                </button>
+
+                <button
+                    type="button"
+                    onClick={() => editor.chain().focus().addColumnBefore().run()}
+                    className="p-2 rounded hover:bg-gray-200"
+                    title="Add Column Before"
+                >
+                    <span className="text-sm">+Col</span>
+                </button>
+
+                <button
+                    type="button"
+                    onClick={() => editor.chain().focus().deleteColumn().run()}
+                    className="p-2 rounded hover:bg-gray-200"
+                    title="Delete Column"
+                >
+                    <span className="text-sm">-Col</span>
+                </button>
+
+                <button
+                    type="button"
+                    onClick={() => editor.chain().focus().addRowBefore().run()}
+                    className="p-2 rounded hover:bg-gray-200"
+                    title="Add Row Before"
+                >
+                    <span className="text-sm">+Row</span>
+                </button>
+
+                <button
+                    type="button"
+                    onClick={() => editor.chain().focus().deleteRow().run()}
+                    className="p-2 rounded hover:bg-gray-200"
+                    title="Delete Row"
+                >
+                    <span className="text-sm">-Row</span>
+                </button>
+
+                <button
+                    type="button"
+                    onClick={() => editor.chain().focus().deleteTable().run()}
+                    className="p-2 rounded hover:bg-gray-200"
+                    title="Delete Table"
+                >
+                    <span className="text-sm">×Table</span>
+                </button>
+
+                <div className="border-l pl-2 ml-2">
+                    <button
+                        type="button"
+                        onClick={() => {
+                            if (!editor) return;
+                            const { state, view } = editor;
+                            const { selection } = state;
+                            const { $from } = selection;
+                            let node = $from.node($from.depth);
+                            let depth = $from.depth;
+                            while (depth > 0 && node && node.type.name !== 'table') {
+                                depth--;
+                                node = state.doc.nodeAt($from.before(depth));
+                            }
+                            if (node && node.type.name === 'table') {
+                                const pos = $from.before(depth);
+                                const tr = state.tr.setNodeMarkup(pos, null, {
+                                    ...node.attrs,
+                                    class: 'align-left'
+                                });
+                                view.dispatch(tr);
+                            }
+                        }}
+                        className="p-2 rounded hover:bg-gray-200"
+                        title="Align Table Left"
+                    >
+                        <FaAlignLeft />
+                    </button>
+
+                    <button
+                        type="button"
+                        onClick={() => {
+                            if (!editor) return;
+                            const { state, view } = editor;
+                            const { selection } = state;
+                            const { $from } = selection;
+                            let node = $from.node($from.depth);
+                            let depth = $from.depth;
+                            while (depth > 0 && node && node.type.name !== 'table') {
+                                depth--;
+                                node = state.doc.nodeAt($from.before(depth));
+                            }
+                            if (node && node.type.name === 'table') {
+                                const pos = $from.before(depth);
+                                const tr = state.tr.setNodeMarkup(pos, null, {
+                                    ...node.attrs,
+                                    class: 'align-center'
+                                });
+                                view.dispatch(tr);
+                            }
+                        }}
+                        className="p-2 rounded hover:bg-gray-200"
+                        title="Align Table Center"
+                    >
+                        <FaAlignCenter />
+                    </button>
+
+                    <button
+                        type="button"
+                        onClick={() => {
+                            if (!editor) return;
+                            const { state, view } = editor;
+                            const { selection } = state;
+                            const { $from } = selection;
+                            let node = $from.node($from.depth);
+                            let depth = $from.depth;
+                            while (depth > 0 && node && node.type.name !== 'table') {
+                                depth--;
+                                node = state.doc.nodeAt($from.before(depth));
+                            }
+                            if (node && node.type.name === 'table') {
+                                const pos = $from.before(depth);
+                                const tr = state.tr.setNodeMarkup(pos, null, {
+                                    ...node.attrs,
+                                    class: 'align-right'
+                                });
+                                view.dispatch(tr);
+                            }
+                        }}
+                        className="p-2 rounded hover:bg-gray-200"
+                        title="Align Table Right"
+                    >
+                        <FaAlignRight />
+                    </button>
+                </div>
+            </div>
         </div>
     )
 }

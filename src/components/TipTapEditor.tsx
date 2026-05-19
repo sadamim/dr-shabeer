@@ -2,6 +2,11 @@
 
 import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
+import Link from '@tiptap/extension-link'
+import { Table } from '@tiptap/extension-table'
+import { TableCell } from '@tiptap/extension-table-cell'
+import { TableHeader } from '@tiptap/extension-table-header'
+import { TableRow } from '@tiptap/extension-table-row'
 import Toolbar from './Toolbar'
 import { useEffect } from 'react'
 
@@ -12,7 +17,17 @@ interface Props {
 
 export default function TipTapEditor({ content, onChange }: Props) {
   const editor = useEditor({
-    extensions: [StarterKit],
+    extensions: [
+      StarterKit,
+      Link,
+      Table.configure({
+        resizable: true,
+        allowTableNodeSelection: true,
+      }),
+      TableRow,
+      TableHeader,
+      TableCell,
+    ],
     content: content || '',
     onUpdate: ({ editor, transaction }) => {
       if (!transaction.docChanged) return // only fire when text changes
