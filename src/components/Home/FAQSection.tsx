@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const faqs = [
     {
@@ -31,29 +31,6 @@ const faqs = [
 ];
 
 const FAQSection = () => {
-    // Move state and effect here inside component
-    const [count, setCount] = useState(0);
-    const target = 95;
-
-    useEffect(() => {
-        let start = 0;
-        const end = target;
-        const duration = 2000; // 2 seconds
-        const increment = end / (duration / 50);
-
-        const counter = setInterval(() => {
-            start += increment;
-            if (start >= end) {
-                setCount(end);
-                clearInterval(counter);
-            } else {
-                setCount(Math.ceil(start));
-            }
-        }, 50);
-
-        return () => clearInterval(counter);
-    }, []);
-
     const [openIndex, setOpenIndex] = useState(0);
 
     const toggleAccordion = (index: number) => {
@@ -83,22 +60,6 @@ const FAQSection = () => {
                                 height={400}
                                 alt="FAQ"
                             />
-                            <div className="faq-patients-count">
-                                <div className="faq-smile-img me-3">
-                                    <Image
-                                        src="/img/icons/smiling-icon.svg"
-                                        width={40}
-                                        height={40}
-                                        alt="Smile Icon"
-                                    />
-                                </div>
-                                <div className="faq-patients-content">
-                                    <h4>
-                                        <span className="count-digit">{count}</span>k+
-                                    </h4>
-                                    <p className="mb-0">Happy Patients</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
 

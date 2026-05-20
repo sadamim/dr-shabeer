@@ -55,6 +55,12 @@ const TestimonialSection = () => {
     return (
         <section className="testimonial-section">
             <div className="container">
+                <div className="text-center mb-4 mb-lg-5">
+                    <p className="text-uppercase fw-bold mb-2" style={{ letterSpacing: '0.14em', color: '#085583' }}>
+                        Patient Stories
+                    </p>
+                    <h2 className="section-title mb-0">What Our Patients Say</h2>
+                </div>
                 <Swiper
                     modules={[Autoplay, Navigation]}
                     spaceBetween={30}
@@ -67,11 +73,9 @@ const TestimonialSection = () => {
                     {testimonials.map(({ name, content }, index) => (
                         <SwiperSlide key={index}>
                             <div className="testimonial-grid ovr-flw">
-                                <div className="testimonial-info mx-5 ms-5">
+                                <div className="testimonial-info mx-0">
                                     <div className="testimonial-content">
-                                        <div className="section-header-one section-header section-inner-header testimonial-header">
-                                            <h2 className="section-title">{name}</h2>
-                                        </div>
+                                        <h3 className="testimonial-name mb-3">{name}</h3>
                                         <div className="testimonial-details">
                                             <p>{content}</p>
                                         </div>

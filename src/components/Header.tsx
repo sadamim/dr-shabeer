@@ -69,7 +69,7 @@ export default function Header() {
                     <div className="main-menu-wrapper">
                         <div className="menu-header">
                             <Link href="/" className="menu-logo">
-                                <Image src={logo} alt="Logo" className="img-fluid" />
+                                <Image src={logo} alt="Logo" className="img-fluid site-logo" width={160} height={40} priority />
                             </Link>
                             <a id="menu_close" className="menu-close" href="#">
                                 <i className="fas fa-times"></i>
@@ -79,7 +79,7 @@ export default function Header() {
                         <ul className="main-nav">
                             <li>
                                 <Link href="/" className="navbar-brand logo mx-100">
-                                    <Image src={logo} alt="Logo" className="img-fluid" />
+                                    <Image src={logo} alt="Logo" className="img-fluid site-logo" width={180} height={44} priority />
                                 </Link>
                             </li>
 

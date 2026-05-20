@@ -64339,3 +64339,668 @@ li strong {
   margin-right: 0;
 }
 
+/* =====================================================================================
+   Homepage design refresh (layout/typography only; content/assets unchanged)
+   ===================================================================================== */
+
+/* Theme helpers */
+:root {
+  --home-surface: #ffffff;
+  --home-surface-2: #f7fafc;
+  --home-text: #0f172a;
+  --home-muted: #475569;
+  --home-border: rgba(15, 23, 42, 0.12);
+  --home-primary: #085583;
+  --home-primary-2: #13A0CA;
+  --home-accent: #65bd60;
+  --home-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* Keep sections from feeling cramped on large screens */
+.banner-section,
+.about-section,
+.counter-section,
+.specialities-section-one,
+.faq-section,
+.testimonial-section {
+  scroll-margin-top: 90px;
+}
+
+/* -------------------------------- Hero / Banner -------------------------------- */
+.banner-section {
+  background: #0b1220;
+}
+
+.banner-section::after {
+  /* preserve existing background image but darken for readability */
+  background: url(../public/img/bg/ban-bg.png), radial-gradient(1200px 500px at 30% 20%, rgba(19, 160, 202, 0.25), transparent 65%),
+    radial-gradient(900px 450px at 75% 65%, rgba(8, 85, 131, 0.35), transparent 60%),
+    linear-gradient(180deg, rgba(11, 18, 32, 0.3), rgba(11, 18, 32, 0.85));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slider-img {
+  position: relative;
+  isolation: isolate;
+}
+
+.slider-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(11, 18, 32, 0.78) 0%, rgba(11, 18, 32, 0.35) 52%, rgba(11, 18, 32, 0.12) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.banner-images {
+  display: block;
+  width: 100%;
+  /* Full desktop hero */
+  height: calc(100vh - 72px);
+  min-height: 640px;
+  max-height: 980px;
+  object-fit: cover;
+  object-position: center;
+  background: #0b1220;
+}
+
+.banner-cont-main {
+  text-align: left !important;
+}
+
+.banner-content {
+  /* override old circular glass style with a modern card */
+  width: min(560px, 92vw);
+  height: auto;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.10);
+  color: #eaf2ff;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: clamp(22px, 2.8vw, 38px);
+  margin-top: 0 !important;
+  min-height: clamp(420px, 52vh, 620px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-content h2 {
+  font-size: clamp(22px, 2.2vw, 30px);
+  letter-spacing: 0.08em;
+  margin-top: 0;
+  color: #eaf2ff;
+}
+
+.banner-content p {
+  color: rgba(234, 242, 255, 0.88);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.banner-content p strong {
+  color: #ffffff;
+}
+
+.read-more-tes.btn,
+.banner-content .btn {
+  border-radius: 999px;
+  padding: 14px 28px;
+  min-height: 52px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 18px 40px rgba(8, 85, 131, 0.28);
+}
+
+.read-more-tes.btn {
+  background: linear-gradient(135deg, #0b5ed7 0%, #0aa2c0 100%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.read-more-tes.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 22px 55px rgba(11, 94, 215, 0.35);
+}
+
+.read-more-tes.btn:active {
+  transform: translateY(0px);
+  filter: brightness(0.98);
+}
+
+@media (max-width: 991.98px) {
+  .slider-img::after {
+    background: linear-gradient(180deg, rgba(11, 18, 32, 0.76) 0%, rgba(11, 18, 32, 0.25) 55%, rgba(11, 18, 32, 0.12) 100%);
+  }
+
+  .banner-cont-main {
+    text-align: center !important;
+  }
+
+  .banner-content {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .banner-images {
+    height: calc(100vh - 60px);
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .banner-images {
+    min-height: 460px;
+    max-height: 760px;
+  }
+}
+
+/* -------------------------------- Banner Sub (2 cards) -------------------------------- */
+/* The previous nested CSS rules are invalid in plain CSS; these are valid overrides. */
+.banner-sub {
+  position: relative;
+  background: var(--home-surface);
+}
+
+.banner-sub .svtm {
+  background: linear-gradient(135deg, rgba(8, 85, 131, 0.98) 0%, rgba(19, 160, 202, 0.88) 100%);
+  color: #ffffff;
+}
+
+.banner-sub .bg-wh-b {
+  background: linear-gradient(135deg, rgba(128, 161, 188, 0.92) 0%, rgba(8, 85, 131, 0.72) 100%) !important;
+  color: #ffffff;
+}
+
+.banner-sub .svtm,
+.banner-sub .bg-wh-b {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-sub .svtm::before,
+.banner-sub .bg-wh-b::before {
+  content: "";
+  position: absolute;
+  inset: -60px -80px auto auto;
+  width: 240px;
+  height: 240px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  filter: blur(0.5px);
+  pointer-events: none;
+}
+
+.banner-sub .ban-sub-hed {
+  font-size: clamp(18px, 1.6vw, 24px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.banner-sub .ban-sub-cont {
+  opacity: 0.95;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.banner-sub .read-more-test {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  min-height: 42px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--home-primary) 0%, var(--home-primary-2) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  text-decoration: none;
+  transition: transform 0.18s ease, filter 0.18s ease, background-color 0.18s ease;
+}
+
+.banner-sub .read-more-test:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+}
+
+/* -------------------------------- About -------------------------------- */
+.about-section {
+  background: var(--home-surface);
+}
+
+.about-section img.img-fluid {
+  border-radius: 18px;
+  box-shadow: var(--home-shadow);
+}
+
+.about-inner-header h2 {
+  letter-spacing: -0.02em;
+}
+
+.about-content-details h4 {
+  color: var(--home-text);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
+}
+
+.about-content-details p {
+  color: var(--home-muted);
+  line-height: 1.8;
+}
+
+/* -------------------------------- Counter -------------------------------- */
+.counter-section {
+  background: radial-gradient(900px 420px at 25% 20%, rgba(12, 224, 255, 0.25), transparent 60%),
+    radial-gradient(800px 400px at 75% 65%, rgba(101, 189, 96, 0.20), transparent 60%),
+    linear-gradient(135deg, #0b4b73 0%, #126b93 35%, #0e9cc6 72%, #1db7d8 100%);
+}
+
+.count-box {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 18px 18px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+.count-box .count-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.count-box h3 {
+  margin: 0;
+  line-height: 1.1;
+}
+
+.count-box p {
+  opacity: 0.92;
+}
+
+/* -------------------------------- Specialities -------------------------------- */
+.specialities-section-one {
+  background: linear-gradient(180deg, var(--home-surface) 0%, var(--home-surface-2) 100%);
+}
+
+.specialities-section-one .specialities-item {
+  border-radius: 16px;
+  border: 1px solid var(--home-border);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.specialities-section-one .specialities-item:hover {
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
+  transform: translateY(-2px);
+}
+
+.specialities-section-one .specialities-img span {
+  width: 84px;
+  height: 84px;
+  border-radius: 999px;
+}
+
+.specialities-section-one .specialities-btn .btn {
+  border-radius: 999px;
+  padding: 12px 18px;
+}
+
+/* -------------------------------- Gut Health Library -------------------------------- */
+.gut-health {
+  border-radius: 28px !important;
+  border: 1px solid rgba(101, 189, 96, 0.35);
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+  height: auto;
+  min-height: 420px;
+  padding: 18px;
+}
+
+.gut-health .main-reviewimages img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 999px !important;
+  margin: 0 auto;
+}
+
+.gut-health h4 a {
+  color: var(--home-text);
+  text-decoration: none;
+}
+
+.gut-health .read-more-test {
+  border-radius: 999px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, var(--home-primary) 0%, var(--home-primary-2) 100%);
+  border: 0;
+  color: #ffffff;
+}
+
+.gut-health .read-more-test:hover {
+  filter: brightness(1.03);
+  transform: translateY(-1px);
+}
+
+/* -------------------------------- Read More buttons (cards/blog lists) -------------------------------- */
+.btn.btn-outline-primary {
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(135deg, #0b5ed7 0%, #0aa2c0 100%);
+  color: #ffffff !important;
+  box-shadow: 0 16px 38px rgba(11, 94, 215, 0.22);
+  transition: transform 0.18s ease, filter 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn.btn-outline-primary:hover,
+.btn.btn-outline-primary:focus {
+  background: linear-gradient(135deg, #0a58ca 0%, #0895b1 100%);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 22px 55px rgba(11, 94, 215, 0.30);
+}
+
+.btn.btn-outline-primary:active {
+  transform: translateY(0px);
+  filter: brightness(0.98);
+}
+
+/* -------------------------------- Header sizing -------------------------------- */
+.header-one .header-nav {
+  height: 72px;
+}
+
+@media (max-width: 991.98px) {
+  .header-one .header-nav {
+    height: 60px;
+  }
+}
+
+.home-head-one .header-nav {
+  position: relative;
+}
+
+/* Center the logo in the header (desktop) */
+@media (min-width: 992px) {
+  .home-head-one .navbar-brand.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 5;
+    width: auto;
+  }
+
+  .home-head-one .navbar-brand.logo img,
+  .home-head-one .site-logo {
+    height: 40px !important;
+    width: auto !important;
+  }
+}
+
+.header .header-nav .menu-header .menu-logo img,
+.navbar-brand.logo img,
+.site-logo {
+  height: 36px !important;
+  width: auto !important;
+}
+
+@media (max-width: 575.98px) {
+  .header .header-nav .menu-header .menu-logo img,
+  .navbar-brand.logo img,
+  .site-logo {
+    height: 30px !important;
+  }
+}
+
+/* Counter section: let grid span full width on desktop */
+.counter-section .counter-grid {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -------------------------------- Counter (taller + premium layout) -------------------------------- */
+.counter-section {
+  padding: 110px 0 110px;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  .counter-section {
+    padding: 70px 0 80px;
+    min-height: auto;
+    display: block;
+  }
+}
+
+.counter-section .counter-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 991.98px) {
+  .counter-section .counter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .counter-section .counter-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.counter-grid-item {
+  min-width: 0;
+}
+
+.count-box {
+  width: 100%;
+  height: 100%;
+  padding: 22px 22px;
+  border-radius: 18px;
+  gap: 16px;
+}
+
+.count-box .count-icon {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+}
+
+.count-box .count-info h3 {
+  font-size: clamp(22px, 2vw, 34px);
+  letter-spacing: -0.02em;
+}
+
+.count-box .count-info p {
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+
+/* -------------------------------- FAQ -------------------------------- */
+.faq-section {
+  background: var(--home-surface);
+  padding: 60px 0 90px;
+}
+
+.faq-info .accordion-item {
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.faq-info .accordion-button {
+  border-radius: 12px !important;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.faq-info .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(19, 160, 202, 0.18);
+}
+
+.faq-patients-count {
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+}
+
+/* -------------------------------- Testimonials -------------------------------- */
+.testimonial-section {
+  background: linear-gradient(180deg, var(--home-surface-2) 0%, #ffffff 100%);
+}
+
+.testimonial-grid {
+  padding: 0;
+}
+
+.testimonial-info {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 18px;
+  padding: clamp(18px, 2.2vw, 28px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.10);
+  margin: 0 !important;
+}
+
+.testimonial-details p {
+  color: #0f172a;
+  line-height: 1.85;
+}
+
+@media (max-width: 767.98px) {
+  .testimonial-info {
+    padding: 16px;
+  }
+}
+
+/* Creative testimonial refresh */
+.testimonial-section {
+  position: relative;
+}
+
+.testimonial-section::after,
+.testimonial-section::before {
+  opacity: 0.22;
+  filter: saturate(1.1);
+}
+
+.testimonial-slider {
+  position: relative;
+  padding: 4px 0 10px;
+}
+
+.testimonial-info {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  background: radial-gradient(1200px 300px at 20% 0%, rgba(11, 94, 215, 0.06), transparent 55%),
+    radial-gradient(900px 260px at 90% 100%, rgba(10, 162, 192, 0.08), transparent 55%),
+    rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(11, 94, 215, 0.14);
+  box-shadow: 0 26px 70px rgba(15, 23, 42, 0.12);
+}
+
+.testimonial-info::before {
+  content: "“";
+  position: absolute;
+  top: -18px;
+  left: 18px;
+  font-size: 120px;
+  line-height: 1;
+  font-weight: 800;
+  color: rgba(11, 94, 215, 0.14);
+  pointer-events: none;
+}
+
+.testimonial-info::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(11, 94, 215, 0.10), rgba(10, 162, 192, 0.06));
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.testimonial-content {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-name {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.testimonial-details p {
+  font-size: 16px;
+  color: rgba(15, 23, 42, 0.86);
+}
+
+/* Swiper navigation: modern circular arrows */
+.testimonial-section .swiper-button-prev,
+.testimonial-section .swiper-button-next {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.14);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+.testimonial-section .swiper-button-prev:hover,
+.testimonial-section .swiper-button-next:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.18);
+}
+
+.testimonial-section .swiper-button-prev::after,
+.testimonial-section .swiper-button-next::after {
+  font-size: 16px;
+  font-weight: 900;
+  color: #0b5ed7;
+}
+
+@media (max-width: 575.98px) {
+  .testimonial-section .swiper-button-prev,
+  .testimonial-section .swiper-button-next {
+    display: none;
+  }
+}
+

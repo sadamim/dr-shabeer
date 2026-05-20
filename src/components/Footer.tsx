@@ -113,8 +113,8 @@ const Footer = () => {
                             <div className="col-md-6 col-lg-6">
                                 <div className="copyright-menu">
                                     <ul className="policy-menu">
-                                        <li><Link href="/">Privacy Policy</Link></li>
-                                        <li><Link href="/">Terms and Conditions</Link></li>
+                                        <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                                        <li><Link href="/terms-and-conditions">Terms and Conditions</Link></li>
                                     </ul>
                                 </div>
                             </div>
