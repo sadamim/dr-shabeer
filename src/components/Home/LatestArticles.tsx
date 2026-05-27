@@ -25,7 +25,7 @@ export default function BlogPage() {
     const fetchPosts = async () => {
       try {
         const res = await axios.get('/api/posts');
-        setPosts(res.data);
+        setPosts(res.data.data);
       } catch (error) {
         console.error('Failed to fetch blog posts:', error);
       } finally {
