@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
 
     try {
         const res = await axios.get(`${process.env.NEXT_PUBLIC_SITE_URL}/api/posts?slug=${slug}`);
-        const post = res.data;
+        const post = res.data.data;
 
         if (!post) {
             return {
@@ -72,7 +72,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
     try {
         const res = await axios.get(`${process.env.NEXT_PUBLIC_SITE_URL}/api/posts?slug=${slug}`);
-        const post = res.data;
+        const post = res.data.data;
 
         if (!post) return notFound();
 
