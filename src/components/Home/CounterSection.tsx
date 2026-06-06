@@ -122,15 +122,15 @@ export default function CounterSection() {
                 <Image
                     src="/img/bg/counter-bg.png"
                     alt="design-background"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     className="bg-06"
                 />
                 <Image
                     src="/img/bg/counter-bg-01.png"
                     alt="eye-background"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
+                    style={{ objectFit: 'contain' }}
                     className="bg-07 opacity-50"
                 />
             </div>

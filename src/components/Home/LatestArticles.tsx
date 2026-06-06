@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import axios from 'axios';
-import Head from 'next/head';
 import Image from 'next/image';
 import BariatricBanner from '@/components/BreadcrumbBanner';
 
