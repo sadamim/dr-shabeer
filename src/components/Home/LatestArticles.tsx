@@ -82,7 +82,7 @@ export default function BlogPage() {
                           </Link>
                         </h5>
                         <p className="card-text">
-                          {post.excerpt || post.content.replace(/<[^>]+>/g, '').substring(0, 100)}...
+                          {post.excerpt || (post.content?.replace(/<[^>]+>/g, '').substring(0, 100) ?? '')}...
                         </p>
                         <Link href={`/blogs/${post.slug}`} className="btn btn-sm btn-outline-primary mt-2">
                           Read More
