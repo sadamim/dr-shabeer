@@ -1,4 +1,10 @@
 import BlogPage from "./blogs";
+import type { BlogPost } from "./blogs";
+import { connectDB } from '@/lib/connectDB';
+import Post from '@/modal/Post';
+
+const excerptFromContent = (content?: string) =>
+  content?.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().substring(0, 100) || '';
 
 export const metadata = {
   title: 'Latest Health Blogs And Medical Information | Dr Shabeer Ahmed',
@@ -23,6 +29,28 @@ export const metadata = {
 };
 
 
-export default function Page() {
-  return <BlogPage />;
+export default async function Page() {
+  let posts: BlogPost[] = [];
+
+  try {
+    await connectDB();
+
+    const blogPosts = await Post.find({ slug: { $exists: true, $ne: '' } })
+      .select('title slug imageUrl date excerpt content')
+      .sort({ createdAt: -1, date: -1 })
+      .lean();
+
+    posts = blogPosts.map((post: any) => ({
+      _id: post._id?.toString() || post.slug,
+      title: post.title || '',
+      slug: post.slug || '',
+      imageUrl: post.imageUrl || '',
+      date: post.date ? new Date(post.date).toISOString() : '',
+      excerpt: post.excerpt || excerptFromContent(post.content),
+    }));
+  } catch (error) {
+    console.error('Failed to load blog posts for /blogs:', error);
+  }
+
+  return <BlogPage initialPosts={posts} />;
 }

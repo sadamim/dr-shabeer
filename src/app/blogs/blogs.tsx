@@ -6,7 +6,7 @@ import axios from 'axios';
 import Image from 'next/image';
 import BariatricBanner from '@/components/BreadcrumbBanner';
 
-type BlogPost = {
+export type BlogPost = {
   _id: string;
   title: string;
   slug: string;
@@ -16,11 +16,18 @@ type BlogPost = {
   content?: string;
 };
 
-export default function BlogPage() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
+type BlogPageProps = {
+  initialPosts?: BlogPost[];
+};
+
+export default function BlogPage({ initialPosts = [] }: BlogPageProps) {
+  const hasInitialPosts = initialPosts.length > 0;
+  const [posts, setPosts] = useState<BlogPost[]>(initialPosts);
+  const [loading, setLoading] = useState(!hasInitialPosts);
 
   useEffect(() => {
+    if (hasInitialPosts) return;
+
     const fetchPosts = async () => {
       try {
         const res = await axios.get('/api/posts');
@@ -39,7 +46,7 @@ export default function BlogPage() {
     };
 
     fetchPosts();
-  }, []);
+  }, [hasInitialPosts]);
 
   return (
     <>
