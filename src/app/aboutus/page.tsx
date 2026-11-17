@@ -1,5 +1,6 @@
-import AboutSection from '@/components/Home/AboutSection';
-import FAQSection from '@/components/Home/FAQSection';
+import AboutDoctor from '@/components/sections/AboutDoctor';
+import Faq from '@/components/sections/Faq';
+import AppointmentCta from '@/components/sections/AppointmentCta';
 import WhyChooseSection from '@/components/WhyChooseSection';
 import BariatricBanner from '@/components/BreadcrumbBanner';
 
@@ -35,9 +36,10 @@ export default function About() {
             <BariatricBanner title="About Us" imageSrc="/img/bannerslider/Bariatric Surgery 2.webp" />
 
             {/* Main Content */}
-            <AboutSection />
+            <AboutDoctor showCta={false} />
             <WhyChooseSection />
-            <FAQSection />
+            <AppointmentCta />
+            <Faq />
         </>
     );
 }

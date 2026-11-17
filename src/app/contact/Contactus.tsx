@@ -154,6 +154,7 @@ export default function ContactPages() {
                                                 <label className="form-label">Services</label>
                                                 <Select
                                                     name="service"
+                                            instanceId="contact-service"
                                                     options={serviceOptions}
                                                     value={serviceOptions.find(opt => opt.value === formData.service) || null}
                                                     onChange={handleSelectChange}

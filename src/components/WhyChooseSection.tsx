@@ -94,7 +94,7 @@ export default function WhyChooseSection() {
                         <p className="abt-cont">
                             Advanced laparoscopic surgery especially for gastrointestinal cancer.
                             He has a passion for Video-Assisted Thoracic Surgery (VATS), Bariatric Surgery, and Metabolic Surgery.
-                            Robotic Surgery and Stem Cell Therapy bhi unki expertise me include hain.
+                            His expertise also includes Robotic Surgery and Stem Cell Therapy.
                         </p>
 
                         <h3>Education & Training</h3>
@@ -162,6 +162,7 @@ export default function WhyChooseSection() {
                                     <div className="form-group mb-3">
                                         <Select
                                             name="service"
+                                            instanceId="about-service"
                                             options={serviceOptions}
                                             value={serviceOptions.find(opt => opt.value === formData.service) || null}
                                             onChange={handleSelectChange}
