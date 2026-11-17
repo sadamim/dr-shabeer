@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
 import TrustStrip from "@/components/sections/TrustStrip";
-import AboutDoctor, { EXPERTISE, QUALIFICATIONS } from "@/components/sections/AboutDoctor";
+import { EXPERTISE, QUALIFICATIONS } from "@/components/sections/AboutDoctor";
 import Specialities from "@/components/sections/Specialities";
 import WhyChoose from "@/components/sections/WhyChoose";
 import ConditionsExplorer from "@/components/sections/ConditionsExplorer";
@@ -99,7 +99,6 @@ export default async function Home() {
       />
       <Hero />
       <TrustStrip />
-      <AboutDoctor />
       <Specialities />
       <WhyChoose />
       <ConditionsExplorer initialLimit={9} />
