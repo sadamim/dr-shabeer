@@ -2,64 +2,66 @@
 'use client';
 
 import { useState, ChangeEvent } from 'react';
+import {
+    LuCalendarCheck,
+    LuCircleAlert,
+    LuCircleCheck,
+    LuClipboardList,
+    LuExternalLink,
+    LuLoaderCircle,
+    LuMail,
+    LuMapPin,
+    LuMessageCircle,
+    LuPhone,
+    LuSend,
+} from 'react-icons/lu';
 import BariatricBanner from '@/components/BreadcrumbBanner';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapPin, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import Select from 'react-select';
+import { SITE } from '@/lib/site';
+
+// Same service list (and values) the enquiry email has always received
+const services = [
+    { label: 'Diarrhea', value: 'Diarrhea' },
+    { label: 'Gastritis', value: 'Gastritis' },
+    { label: 'Bariatric Surgery', value: 'Bariatric Surgery' },
+    { label: 'Obesity', value: 'Obesity' },
+    { label: 'Laser Surgery', value: 'Laser Surgery' },
+    { label: 'Gastric Balloon', value: 'Gastric Balloon' },
+    { label: 'Rectal Bleeding', value: 'Rectal Bleeding' },
+    { label: 'Endoscopic Surgery', value: 'Endoscopic Surgery' },
+    { label: 'Incisional Hernia', value: 'Incisional Hernia' },
+    { label: 'Inguinal Hernia', value: 'Inguinal Hernia' },
+    { label: 'Anal Fissure, Anal Fistula', value: 'Anal Fissure, Anal Fistula' },
+    { label: 'Abdominal Pain', value: 'Abdominal Pain' },
+    { label: 'Surgery For Reflux Disease', value: 'Surgery For Reflux Disease' },
+    { label: 'Irritable Bowel Syndrome', value: 'Irritable Bowel Syndrome' },
+    { label: 'Cancer Treatment', value: 'Cancer Treatment' },
+    { label: 'Stem Cell Therapy', value: 'Stem Cell Therapy' },
+    { label: 'Robotic Surgery', value: 'Robotic Surgery' },
+    { label: 'Gallstones', value: 'Gallstones' },
+    { label: 'Piles', value: 'Piles' },
+    { label: 'Gastroesophageal Reflux Disease', value: 'Gastroesophageal Reflux Disease' },
+    { label: 'Laparoscopic Surgery', value: 'Laparoscopic Surgery' },
+];
+
+const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.address)}`;
+
+type Status = 'idle' | 'sending' | 'success' | 'error';
+
+const emptyForm = { name: '', email: '', phone: '', service: '', message: '' };
 
 export default function ContactPages() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
-    });
+    const [formData, setFormData] = useState(emptyForm);
+    const [status, setStatus] = useState<Status>('idle');
 
-    const [status, setStatus] = useState('');
-
-    const services = [
-        { label: 'Diarrhea', value: 'Diarrhea' },
-        { label: 'Gastritis', value: 'Gastritis' },
-        { label: 'Bariatric Surgery', value: 'Bariatric Surgery' },
-        { label: 'Obesity', value: 'Obesity' },
-        { label: 'Laser Surgery', value: 'Laser Surgery' },
-        { label: 'Gastric Balloon', value: 'Gastric Balloon' },
-        { label: 'Rectal Bleeding', value: 'Rectal Bleeding' },
-        { label: 'Endoscopic Surgery', value: 'Endoscopic Surgery' },
-        { label: 'Incisional Hernia', value: 'Incisional Hernia' },
-        { label: 'Inguinal Hernia', value: 'Inguinal Hernia' },
-        { label: 'Anal Fissure, Anal Fistula', value: 'Anal Fissure, Anal Fistula' },
-        { label: 'Abdominal Pain', value: 'Abdominal Pain' },
-        { label: 'Surgery For Reflux Disease', value: 'refluxSurgery For Reflux Disease' },
-        { label: 'Irritable Bowel Syndrome', value: 'Irritable Bowel Syndrome' },
-        { label: 'Cancer Treatment', value: 'Cancer Treatment' },
-        { label: 'Stem Cell Therapy', value: 'Stem Cell Therapy' },
-        { label: 'Robotic Surgery', value: 'Robotic Surgery' },
-        { label: 'Gallstones', value: 'Gallstones' },
-        { label: 'Piles', value: 'Piles' },
-        { label: 'Gastroesophageal Reflux Disease', value: 'Gastroesophageal Reflux Disease' },
-        { label: 'Laparoscopic Surgery', value: 'Laparoscopic Surgery' }
-    ];
-
-    const serviceOptions = services.map(item => ({
-        value: item.value,
-        label: item.label
-    }));
-
-    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        e.preventDefault();
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
-    const handleSelectChange = (selectedOption: any) => {
-        setFormData(prev => ({ ...prev, service: selectedOption?.value || '' }));
+        setFormData((prev) => ({ ...prev, [name]: value }));
+        if (status === 'success' || status === 'error') setStatus('idle');
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setStatus('Sending...');
+        setStatus('sending');
 
         try {
             const res = await fetch('/api/sendEmail', {
@@ -69,130 +71,169 @@ export default function ContactPages() {
             });
 
             if (res.ok) {
-                setStatus('Message sent successfully!');
-                setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+                setStatus('success');
+                setFormData(emptyForm);
             } else {
-                setStatus('Failed to send message.');
+                setStatus('error');
             }
         } catch (error) {
-            console.error("Form submission error:", error);
-            setStatus('An error occurred while sending the message.');
+            console.error('Form submission error:', error);
+            setStatus('error');
         }
     };
+
+    const methods = [
+        {
+            icon: LuCalendarCheck,
+            title: 'Book an appointment',
+            text: `Book online at ${SITE.appointmentHospital}`,
+            href: SITE.appointmentHref,
+            cta: 'Book online',
+            external: true,
+        },
+        {
+            icon: LuPhone,
+            title: 'Call the clinic',
+            text: SITE.phoneDisplay,
+            href: SITE.phoneHref,
+            cta: 'Call now',
+        },
+        {
+            icon: LuMessageCircle,
+            title: 'WhatsApp',
+            text: SITE.phoneDisplay,
+            href: SITE.whatsappHref,
+            cta: 'Start chat',
+            external: true,
+        },
+        {
+            icon: LuMail,
+            title: 'Email',
+            text: SITE.email,
+            href: `mailto:${SITE.email}`,
+            cta: 'Send email',
+        },
+    ];
+
     return (
         <>
-           
-
             <BariatricBanner title="Contact Us" imageSrc="/img/bannerslider/Bariatric Surgery 2.webp" />
 
-            <section className="contact-section py-5">
-                <div className="container">
-                    <div className="row">
-                        {/* Left Side - Contact Info */}
-                        <div className="col-lg-5 col-md-12">
-                            <div className="section-inner-header contact-inner-header mb-4">
-                                <h6>Get in Touch</h6>
-                                <h2>Have Any Question?</h2>
-                            </div>
+            <section className="ds-section ds-section--soft ds-contact" aria-labelledby="contact-title">
+                <div className="ds-container ds-contact__grid">
+                    {/* Contact options */}
+                    <div>
+                        <p className="ds-eyebrow">Get in touch</p>
+                        <h2 id="contact-title" className="ds-h2">Have a question? We&apos;re here to help.</h2>
+                        <p className="ds-lead">
+                            Book an appointment, call or WhatsApp the clinic, or send a message using the form.
+                        </p>
 
-                            <div className="card contact-card mb-3">
-                                <div className="card-body d-flex align-items-start">
-                                    <div className="contact-icon me-3">
-                                        <FontAwesomeIcon icon={faMapPin} size="lg" />
+                        <ul className="ds-contact__methods">
+                            {methods.map(({ icon: Icon, title, text, href, cta, external }) => (
+                                <li key={title} className="ds-card ds-card--hover ds-contact__method">
+                                    <span className="ds-icon-badge"><Icon aria-hidden="true" /></span>
+                                    <div>
+                                        <h3>{title}</h3>
+                                        <p>{text}</p>
+                                        <a
+                                            href={href}
+                                            className="ds-link"
+                                            {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                                        >
+                                            {cta}
+                                            {external ? <LuExternalLink aria-hidden="true" /> : null}
+                                            <span className="ds-sr-only">: {title}</span>
+                                        </a>
                                     </div>
-                                    <div className="contact-details">
-                                        <h4>Address</h4>
-                                        <p>830 13 Main 3 Block Koramangala Bangalore 560034</p>
-                                    </div>
-                                </div>
-                            </div>
+                                </li>
+                            ))}
+                        </ul>
 
-                            <div className="card contact-card mb-3">
-                                <div className="card-body d-flex align-items-start">
-                                    <div className="contact-icon me-3">
-                                        <FontAwesomeIcon icon={faPhone} size="lg" />
-                                    </div>
-                                    <div className="contact-details">
-                                        <h4>Phone Number</h4>
-                                        <p>+91 9071246002</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="card contact-card">
-                                <div className="card-body d-flex align-items-start">
-                                    <div className="contact-icon me-3">
-                                        <FontAwesomeIcon icon={faEnvelope} size="lg" />
-                                    </div>
-                                    <div className="contact-details">
-                                        <h4>Email Address</h4>
-                                        <p>drshabeerahmed@gmail.com</p>
-                                    </div>
-                                </div>
+                        <div className="ds-card ds-contact__address">
+                            <span className="ds-icon-badge"><LuMapPin aria-hidden="true" /></span>
+                            <div>
+                                <h3>Clinic address</h3>
+                                <address>{SITE.address}</address>
+                                <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="ds-link">
+                                    Open in Google Maps <LuExternalLink aria-hidden="true" />
+                                </a>
                             </div>
                         </div>
 
-                        {/* Right Side - Contact Form */}
-                        <div className="col-lg-7 col-md-12 d-flex">
-                            <div className="card contact-form-card w-100">
-                                <div className="card-body">
-                                    <form onSubmit={handleSubmit}>
-                                        <div className="row">
-                                            <div className="col-md-6 mb-3">
-                                                <label className="form-label">Name</label>
-                                                <input type="text" name="name" className="form-control" value={formData.name} onChange={handleChange} required />
-                                            </div>
-                                            <div className="col-md-6 mb-3">
-                                                <label className="form-label">Email Address</label>
-                                                <input type="email" name="email" className="form-control" value={formData.email} onChange={handleChange} required />
-                                            </div>
-                                            <div className="col-md-6 mb-3">
-                                                <label className="form-label">Phone Number</label>
-                                                <input type="text" name="phone" className="form-control" value={formData.phone} onChange={handleChange} />
-                                            </div>
-                                            <div className="col-md-6 mb-3">
-                                                <label className="form-label">Services</label>
-                                                <Select
-                                                    name="service"
-                                            instanceId="contact-service"
-                                                    options={serviceOptions}
-                                                    value={serviceOptions.find(opt => opt.value === formData.service) || null}
-                                                    onChange={handleSelectChange}
-                                                    placeholder="Select Service..."
-                                                    isSearchable
-                                                    required
-                                                />
-                                            </div>
-                                            <div className="col-md-12 mb-3">
-                                                <label className="form-label">Message</label>
-                                                <textarea name="message" className="form-control" value={formData.message} onChange={handleChange} required></textarea>
-                                            </div>
-                                            <div className="col-md-12">
-                                                <button type="submit" className="btn btn-primary prime-btn w-100">Send Message</button>
-                                                {status && <p className="mt-3">{status}</p>}
-                                            </div>
-                                        </div>
-                                    </form>
+                        <a
+                            href={SITE.requestAppointmentHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="ds-contact__request"
+                        >
+                            <LuClipboardList aria-hidden="true" />
+                            Prefer to request a slot? <strong>Request an appointment</strong>
+                            <LuExternalLink aria-hidden="true" />
+                        </a>
+                    </div>
+
+                    {/* Enquiry form */}
+                    <div className="ds-card ds-contact__form">
+                        <h2 className="ds-h3">Send us a message</h2>
+                        <p className="ds-muted" style={{ fontSize: '0.92rem' }}>
+                            Fields marked <span aria-hidden="true">*</span><span className="ds-sr-only">with an asterisk</span> are required.
+                            Please don&apos;t include urgent medical concerns — call the clinic instead.
+                        </p>
+
+                        <form onSubmit={handleSubmit} noValidate={false}>
+                            <div className="ds-form-grid">
+                                <div className="ds-field">
+                                    <label htmlFor="contact-name">Name <span aria-hidden="true">*</span></label>
+                                    <input id="contact-name" type="text" name="name" className="ds-input" autoComplete="name" value={formData.name} onChange={handleChange} required />
+                                </div>
+                                <div className="ds-field">
+                                    <label htmlFor="contact-email">Email address <span aria-hidden="true">*</span></label>
+                                    <input id="contact-email" type="email" name="email" className="ds-input" autoComplete="email" value={formData.email} onChange={handleChange} required />
+                                </div>
+                                <div className="ds-field">
+                                    <label htmlFor="contact-phone">Phone number</label>
+                                    <input id="contact-phone" type="tel" name="phone" className="ds-input" autoComplete="tel" value={formData.phone} onChange={handleChange} />
+                                </div>
+                                <div className="ds-field">
+                                    <label htmlFor="contact-service">Service <span aria-hidden="true">*</span></label>
+                                    <select id="contact-service" name="service" className="ds-select" value={formData.service} onChange={handleChange} required>
+                                        <option value="" disabled>Select a service…</option>
+                                        {services.map((s) => (
+                                            <option key={s.value} value={s.value}>{s.label}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div className="ds-field ds-field--full">
+                                    <label htmlFor="contact-message">Message <span aria-hidden="true">*</span></label>
+                                    <textarea id="contact-message" name="message" className="ds-input" rows={5} value={formData.message} onChange={handleChange} required />
                                 </div>
                             </div>
-                        </div>
+
+                            <button type="submit" className="ds-btn ds-btn--primary ds-contact__submit" disabled={status === 'sending'}>
+                                {status === 'sending' ? (
+                                    <><LuLoaderCircle className="ds-spin" aria-hidden="true" /> Sending…</>
+                                ) : (
+                                    <><LuSend aria-hidden="true" /> Send Message</>
+                                )}
+                            </button>
+
+                            <div role="status" aria-live="polite">
+                                {status === 'success' && (
+                                    <p className="ds-alert ds-alert--success">
+                                        <LuCircleCheck aria-hidden="true" /> Message sent successfully! The clinic will get back to you.
+                                    </p>
+                                )}
+                                {status === 'error' && (
+                                    <p className="ds-alert ds-alert--error">
+                                        <LuCircleAlert aria-hidden="true" /> Sorry, your message could not be sent. Please try again or call {SITE.phoneDisplay}.
+                                    </p>
+                                )}
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>
-
-            {/* Map Section */}
-            {/* <div className="contact-map mt-5">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.7301009561315!2d-76.13077892422932!3d36.82498697224007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89bae976cfe9f8af%3A0xa61eac05156fbdb9!2sBeachStreet%20USA!5e0!3m2!1sen!2sin!4v1669777904208!5m2!1sen!2sin"
-                    width="100%"
-                    height="400"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Clinic Location Map"
-                ></iframe>
-            </div> */}
         </>
     );
 }

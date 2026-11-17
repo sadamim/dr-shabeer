@@ -2980,3 +2980,206 @@ a:focus:not(:focus-visible) {
     align-self: stretch;
   }
 }
+
+/* ---------- Contact page ---------- */
+.ds-contact__grid {
+  display: grid;
+  gap: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  align-items: start;
+}
+
+.ds-contact__methods {
+  list-style: none;
+  margin: 2rem 0 1rem;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.ds-contact__method,
+.ds-contact__address {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem;
+}
+
+.ds-contact__method .ds-icon-badge,
+.ds-contact__address .ds-icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+}
+
+.ds-contact__method .ds-icon-badge svg,
+.ds-contact__address .ds-icon-badge svg {
+  width: 22px;
+  height: 22px;
+}
+
+.ds-contact__method h3,
+.ds-contact__address h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--ds-primary);
+  margin: 0 0 0.2rem;
+}
+
+.ds-contact__method p,
+.ds-contact__address address {
+  margin: 0 0 0.5rem;
+  font-size: 0.92rem;
+  font-style: normal;
+  color: var(--ds-muted);
+  word-break: break-word;
+}
+
+/* whole method card is clickable via its link */
+.ds-contact__method .ds-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.ds-contact__method .ds-link svg {
+  width: 14px;
+  height: 14px;
+}
+
+.ds-contact__address {
+  margin-bottom: 1rem;
+}
+
+.ds-contact__request {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--ds-radius);
+  border: 1.5px dashed #c8d8e3;
+  color: var(--ds-text);
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.ds-contact__request:hover {
+  border-color: var(--ds-secondary);
+  color: var(--ds-primary);
+  background: #fff;
+}
+
+.ds-contact__request svg {
+  width: 18px;
+  height: 18px;
+  color: var(--ds-secondary);
+}
+
+.ds-contact__request strong {
+  color: var(--ds-secondary);
+}
+
+.ds-contact__form {
+  padding: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+  box-shadow: var(--ds-shadow) !important;
+}
+
+.ds-form-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.ds-field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.ds-field label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ds-primary);
+}
+
+.ds-field label span {
+  color: #b42318;
+}
+
+.ds-field textarea.ds-input {
+  min-height: 140px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.ds-contact__submit {
+  width: 100%;
+  min-height: 54px;
+}
+
+.ds-contact__submit:disabled {
+  opacity: 0.75;
+  cursor: progress;
+  transform: none;
+}
+
+.ds-spin {
+  animation: ds-spin 0.9s linear infinite;
+}
+
+@keyframes ds-spin {
+  to { transform: rotate(360deg); }
+}
+
+.ds-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: 1rem 0 0;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.ds-alert svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+}
+
+.ds-alert--success {
+  background: #e7f6ef;
+  color: #0f6b3f;
+}
+
+.ds-alert--error {
+  background: #fdecea;
+  color: #a12b1f;
+}
+
+@media (min-width: 640px) {
+  .ds-contact__methods {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ds-form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ds-field--full {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 992px) {
+  .ds-contact__grid {
+    grid-template-columns: 1fr 1.05fr;
+  }
+
+  .ds-contact__form {
+    position: sticky;
+    top: calc(var(--ds-header-h) + 24px);
+  }
+}
