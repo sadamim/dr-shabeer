@@ -2,6 +2,7 @@ import BlogPage from "./blogs";
 import type { BlogPost } from "./blogs";
 import { connectDB } from '@/lib/connectDB';
 import Post from '@/modal/Post';
+import { normalizeSlug } from '@/lib/utils/slug';
 
 const excerptFromContent = (content?: string) =>
   content?.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().substring(0, 100) || '';
@@ -43,7 +44,7 @@ export default async function Page() {
     posts = blogPosts.map((post: any) => ({
       _id: post._id?.toString() || post.slug,
       title: post.title || '',
-      slug: post.slug || '',
+      slug: normalizeSlug(post.slug),
       imageUrl: post.imageUrl || '',
       date: post.date ? new Date(post.date).toISOString() : '',
       excerpt: post.excerpt || excerptFromContent(post.content),

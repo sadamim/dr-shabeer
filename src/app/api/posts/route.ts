@@ -4,6 +4,8 @@ import { connectDB } from '@/lib/connectDB';
 import Post from '@/modal/Post';
 import { NextRequest, NextResponse } from 'next/server';
 import { uploadToCloudinary } from '@/lib/utils/cloudinary';
+import { normalizeSlug } from '@/lib/utils/slug';
+import { getPostBySlug } from '@/lib/getPostBySlug';
 
 // =========================
 // GET POSTS
@@ -14,14 +16,14 @@ export async function GET(req: NextRequest) {
     try {
         const { searchParams } = new URL(req.url);
 
-        const slug = searchParams.get('slug');
+        const slug = normalizeSlug(searchParams.get('slug'));
         const id = searchParams.get('id');
 
         let post;
 
         // Get by slug
         if (slug) {
-            post = await Post.findOne({ slug });
+            post = await getPostBySlug(slug);
         }
 
         // Get by id
@@ -66,7 +68,7 @@ export async function POST(req: NextRequest) {
         const formData = await req.formData();
 
         const title = formData.get('title') as string;
-        const slug = formData.get('slug') as string;
+        const slug = normalizeSlug(formData.get('slug') as string);
 
         const content = formData.get('content') as string;
         const author = formData.get('author') as string;
@@ -162,7 +164,7 @@ export async function PUT(req: NextRequest) {
         const id = formData.get('id') as string;
 
         const title = formData.get('title') as string;
-        const slug = formData.get('slug') as string;
+        const slug = normalizeSlug(formData.get('slug') as string);
 
         const content = formData.get('content') as string;
         const author = formData.get('author') as string;

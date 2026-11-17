@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { connectDB } from '@/lib/connectDB';
 import Page from '@/modal/Page';
 import Post from '@/modal/Post';
+import { normalizeSlug } from '@/lib/utils/slug';
 
 export const revalidate = 3600;
 
@@ -92,7 +93,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         });
 
         posts.forEach((post: any) => {
-            const slug = typeof post.slug === 'string' ? post.slug.trim() : '';
+            const slug = typeof post.slug === 'string' ? normalizeSlug(post.slug) : '';
             const url = slug ? routeUrl(`blogs/${encodePathSegment(slug)}`) : '';
 
             if (url && !existingUrls.has(url)) {

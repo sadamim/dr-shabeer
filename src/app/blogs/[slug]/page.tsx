@@ -1,8 +1,9 @@
 // src/app/blogs/[slug]/page.tsx
 import { notFound } from 'next/navigation';
-import axios from 'axios';
+import { getPostBySlug } from '@/lib/getPostBySlug';
 import { Metadata } from 'next';
 import BariatricBanner from '@/components/BreadcrumbBanner';
+import { normalizeSlug } from '@/lib/utils/slug';
 
 export type BlogPostProps = {
     params: Promise<{ slug: string }>;
@@ -12,8 +13,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
     const { slug } = await params;
 
     try {
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_SITE_URL}/api/posts?slug=${slug}`);
-        const post = res.data.data;
+        const post: any = await getPostBySlug(slug);
 
         if (!post) {
             return {
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
             openGraph: {
                 title: post.metaTitle || post.title,
                 description: post.metaDescription || post.content.substring(0, 160),
-                url: `${process.env.NEXT_PUBLIC_SITE_URL}/blogs/${post.slug}`,
+                url: `${process.env.NEXT_PUBLIC_SITE_URL}/blogs/${normalizeSlug(post.slug)}`,
                 siteName: "Dr. Shabeer Ahmed | Gastroenterologist",
                 images: [
                     {
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
             keywords: post.metaKeywords?.split(',') || ['health', 'gastro', 'blog'],
             // ✅ Add canonical URL here
             alternates: {
-                canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/blogs/${post.slug}`,
+                canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/blogs/${normalizeSlug(post.slug)}`,
             },
             robots: {
                 index: true,
@@ -71,8 +71,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
     const { slug } = await params;
 
     try {
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_SITE_URL}/api/posts?slug=${slug}`);
-        const post = res.data.data;
+        const post: any = await getPostBySlug(slug);
 
         if (!post) return notFound();
 

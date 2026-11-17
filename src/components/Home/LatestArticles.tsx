@@ -5,6 +5,7 @@ import Link from 'next/link';
 import axios from 'axios';
 import Image from 'next/image';
 import BariatricBanner from '@/components/BreadcrumbBanner';
+import { normalizeSlug } from '@/lib/utils/slug';
 
 interface BlogPost {
   _id: string;
@@ -61,7 +62,7 @@ export default function BlogPage() {
                 return (
                   <div className="col-lg-4 col-md-6 mb-4" key={post._id}>
                     <div className="card h-100 border-0 shadow-sm">
-                      <Link href={`/blogs/${post.slug}`}>
+                      <Link href={`/blogs/${normalizeSlug(post.slug)}`}>
                         <div className="position-relative" style={{ height: '220px' }}>
                           <Image
                             src={imageUrl}
@@ -77,14 +78,14 @@ export default function BlogPage() {
                           <li><i className="far fa-calendar-alt me-1" /> {dateFormatted}</li>
                         </ul>
                         <h5 className="card-title">
-                          <Link href={`/blogs/${post.slug}`} className="text-dark text-decoration-none">
+                          <Link href={`/blogs/${normalizeSlug(post.slug)}`} className="text-dark text-decoration-none">
                             {post.title}
                           </Link>
                         </h5>
                         <p className="card-text">
                           {post.excerpt || (post.content?.replace(/<[^>]+>/g, '').substring(0, 100) ?? '')}...
                         </p>
-                        <Link href={`/blogs/${post.slug}`} className="btn btn-sm btn-outline-primary mt-2">
+                        <Link href={`/blogs/${normalizeSlug(post.slug)}`} className="btn btn-sm btn-outline-primary mt-2">
                           Read More
                         </Link>
                       </div>

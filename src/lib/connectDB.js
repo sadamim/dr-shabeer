@@ -1,7 +1,14 @@
 // lib/dbConnect.ts
 import mongoose from 'mongoose';
+import dns from 'node:dns';
 
 const MONGODB_URI = process.env.MONGODB_URI;
+
+// Some local routers return SRV answers Node can't parse (querySrv EBADRESP),
+// which breaks "mongodb+srv://" URIs in development. Use public resolvers locally.
+if (process.env.NODE_ENV !== 'production' && MONGODB_URI?.startsWith('mongodb+srv://')) {
+    dns.setServers(['8.8.8.8', '1.1.1.1']);
+}
 
 if (!MONGODB_URI) {
     throw new Error('Please define the MONGODB_URI environment variable');

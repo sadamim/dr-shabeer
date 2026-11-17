@@ -5,6 +5,7 @@ import Link from 'next/link';
 import axios from 'axios';
 import Image from 'next/image';
 import BariatricBanner from '@/components/BreadcrumbBanner';
+import { normalizeSlug } from '@/lib/utils/slug';
 
 export type BlogPost = {
   _id: string;
@@ -71,7 +72,7 @@ export default function BlogPage({ initialPosts = [] }: BlogPageProps) {
                   <div key={post._id || post.slug} className="col-md-4 col-sm-12 mb-4">
                     <div className="blog grid-blog border rounded shadow-sm overflow-hidden h-100">
                       <div className="blog-image">
-                        <Link href={`/blogs/${post.slug}`}>
+                        <Link href={`/blogs/${normalizeSlug(post.slug)}`}>
                           <Image
                             src={imageUrl}
                             alt={post.title || 'Blog image'}
@@ -94,7 +95,7 @@ export default function BlogPage({ initialPosts = [] }: BlogPageProps) {
 
                         <h3 className="blog-title h5">
                           <Link
-                            href={`/blogs/${post.slug}`}
+                            href={`/blogs/${normalizeSlug(post.slug)}`}
                             className="text-decoration-none text-dark fw-bold"
                           >
                             {post.title}
@@ -109,7 +110,7 @@ export default function BlogPage({ initialPosts = [] }: BlogPageProps) {
                         </p>
 
                         <Link
-                          href={`/blogs/${post.slug}`}
+                          href={`/blogs/${normalizeSlug(post.slug)}`}
                           className="btn btn-link mt-2 p-0 text-primary"
                         >
                           Read More
