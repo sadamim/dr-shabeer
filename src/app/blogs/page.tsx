@@ -7,6 +7,11 @@ import { normalizeSlug } from '@/lib/utils/slug';
 const excerptFromContent = (content?: string) =>
   content?.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().substring(0, 100) || '';
 
+const readingMinutes = (content?: string) => {
+  const words = (content || '').replace(/<[^>]+>/g, ' ').trim().split(/\s+/).filter(Boolean).length;
+  return words ? Math.max(1, Math.round(words / 200)) : null;
+};
+
 export const metadata = {
   title: 'Latest Health Blogs And Medical Information | Dr Shabeer Ahmed',
   description:
@@ -37,7 +42,7 @@ export default async function Page() {
     await connectDB();
 
     const blogPosts = await Post.find({ slug: { $exists: true, $ne: '' } })
-      .select('title slug imageUrl date excerpt content')
+      .select('title slug imageUrl date excerpt content category metaDescription')
       .sort({ createdAt: -1, date: -1 })
       .lean();
 
@@ -47,7 +52,9 @@ export default async function Page() {
       slug: normalizeSlug(post.slug),
       imageUrl: post.imageUrl || '',
       date: post.date ? new Date(post.date).toISOString() : '',
-      excerpt: post.excerpt || excerptFromContent(post.content),
+      excerpt: post.excerpt || post.metaDescription || excerptFromContent(post.content),
+      category: (post.category || '').trim(),
+      readingMinutes: readingMinutes(post.content),
     }));
   } catch (error) {
     console.error('Failed to load blog posts for /blogs:', error);

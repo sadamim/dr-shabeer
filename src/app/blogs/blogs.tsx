@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useId, useMemo, useState } from 'react';
 import Link from 'next/link';
 import axios from 'axios';
 import Image from 'next/image';
+import { LuArrowRight, LuCalendar, LuClock, LuSearch } from 'react-icons/lu';
 import BariatricBanner from '@/components/BreadcrumbBanner';
 import { normalizeSlug } from '@/lib/utils/slug';
 
@@ -15,17 +16,67 @@ export type BlogPost = {
   date?: string;
   excerpt?: string;
   content?: string;
+  category?: string;
+  readingMinutes?: number | null;
 };
 
 type BlogPageProps = {
   initialPosts?: BlogPost[];
 };
 
+const PAGE_SIZE = 12;
+const MAX_TABS = 6;
+
+const formatDate = (iso?: string) =>
+  iso ? new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+
+const excerptOf = (post: BlogPost) =>
+  post.excerpt ||
+  post.content?.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().substring(0, 160) ||
+  'Read our latest health article';
+
+function PostImage({ post, sizes, priority }: { post: BlogPost; sizes: string; priority?: boolean }) {
+  if (!post.imageUrl) return null;
+  const isCloudinary = post.imageUrl.includes('res.cloudinary.com');
+  return (
+    <Image
+      src={post.imageUrl}
+      alt=""
+      fill
+      sizes={sizes}
+      priority={priority}
+      unoptimized={!isCloudinary}
+    />
+  );
+}
+
+function Meta({ post }: { post: BlogPost }) {
+  return (
+    <div className="ds-article__meta">
+      {post.date && (
+        <span>
+          <LuCalendar aria-hidden="true" /> <time dateTime={post.date}>{formatDate(post.date)}</time>
+        </span>
+      )}
+      {post.readingMinutes ? (
+        <span>
+          <LuClock aria-hidden="true" /> {post.readingMinutes} min read
+        </span>
+      ) : null}
+    </div>
+  );
+}
+
 export default function BlogPage({ initialPosts = [] }: BlogPageProps) {
   const hasInitialPosts = initialPosts.length > 0;
   const [posts, setPosts] = useState<BlogPost[]>(initialPosts);
   const [loading, setLoading] = useState(!hasInitialPosts);
+  const [query, setQuery] = useState('');
+  const [tab, setTab] = useState('All');
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const searchId = useId();
 
+  // Fallback when the server could not load posts
   useEffect(() => {
     if (hasInitialPosts) return;
 
@@ -49,6 +100,30 @@ export default function BlogPage({ initialPosts = [] }: BlogPageProps) {
     fetchPosts();
   }, [hasInitialPosts]);
 
+  const tabs = useMemo(() => {
+    const counts = new Map<string, number>();
+    posts.forEach((p) => {
+      const c = p.category?.trim();
+      if (c) counts.set(c, (counts.get(c) || 0) + 1);
+    });
+    return ['All', ...[...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, MAX_TABS).map(([c]) => c)];
+  }, [posts]);
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return posts
+      .filter((p) => tab === 'All' || p.category?.trim() === tab)
+      .filter((p) => !q || `${p.title} ${excerptOf(p)} ${p.category || ''}`.toLowerCase().includes(q));
+  }, [posts, query, tab]);
+
+  useEffect(() => setVisibleCount(PAGE_SIZE), [query, tab]);
+
+  // Large featured card only on the unfiltered first view
+  const showFeatured = tab === 'All' && !query.trim() && filtered.length > 1;
+  const featured = showFeatured ? filtered[0] : null;
+  const rest = (showFeatured ? filtered.slice(1) : filtered).slice(0, visibleCount);
+  const remaining = (showFeatured ? filtered.length - 1 : filtered.length) - rest.length;
+
   return (
     <>
       <BariatricBanner
@@ -56,97 +131,120 @@ export default function BlogPage({ initialPosts = [] }: BlogPageProps) {
         imageSrc="/img/bannerslider/Diarrhea BANNER.webp"
       />
 
-      <div className="container my-5">
-        {loading ? (
-          <div className="text-center py-5">
-            <div className="spinner-border text-primary mb-3" role="status" />
-            <p>Loading blogs...</p>
-          </div>
-        ) : (
-          <div className="row blog-grid-row">
-            {posts.length > 0 ? (
-              posts.map((post) => {
-                const imageUrl = post.imageUrl || '/img/placeholder.jpg';
-
-                return (
-                  <div key={post._id || post.slug} className="col-md-4 col-sm-12 mb-4">
-                    <div className="blog grid-blog border rounded shadow-sm overflow-hidden h-100">
-                      <div className="blog-image">
-                        <Link href={`/blogs/${normalizeSlug(post.slug)}`}>
-                          <Image
-                            src={imageUrl}
-                            alt={post.title || 'Blog image'}
-                            width={600}
-                            height={400}
-                            className="img-fluid"
-                          />
-                        </Link>
-                      </div>
-
-                      <div className="blog-content p-3">
-                        <ul className="entry-meta meta-item list-inline mb-2 small text-muted">
-                          <li className="list-inline-item">
-                            <i className="far fa-clock me-1"></i>{' '}
-                            {post.date
-                              ? new Date(post.date).toLocaleDateString()
-                              : 'No date'}
-                          </li>
-                        </ul>
-
-                        <h3 className="blog-title h5">
-                          <Link
-                            href={`/blogs/${normalizeSlug(post.slug)}`}
-                            className="text-decoration-none text-dark fw-bold"
-                          >
-                            {post.title}
-                          </Link>
-                        </h3>
-
-                        <p className="mb-0 text-truncate-2-lines">
-                          {post.excerpt ||
-                            post.content?.replace(/<[^>]+>/g, '').substring(0, 100) ||
-                            'Read our latest health article'}
-                          ...
-                        </p>
-
-                        <Link
-                          href={`/blogs/${normalizeSlug(post.slug)}`}
-                          className="btn btn-link mt-2 p-0 text-primary"
-                        >
-                          Read More
-                        </Link>
-                      </div>
-                    </div>
+      <section className="ds-section ds-section--soft ds-blogs" aria-label="Blog articles">
+        <div className="ds-container">
+          {loading ? (
+            <div className="ds-empty" role="status">Loading articles…</div>
+          ) : posts.length === 0 ? (
+            <div className="ds-empty">
+              <strong>No blog posts found.</strong>
+              <br />
+              We couldn&apos;t find any blog posts at the moment. Please check back later.
+            </div>
+          ) : (
+            <>
+              <div className="ds-blogs__toolbar">
+                <div className="ds-search">
+                  <label htmlFor={searchId} className="ds-sr-only">Search articles</label>
+                  <LuSearch aria-hidden="true" />
+                  <input
+                    id={searchId}
+                    type="search"
+                    className="ds-input"
+                    placeholder="Search articles…"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    autoComplete="off"
+                  />
+                </div>
+                {tabs.length > 1 && (
+                  <div className="ds-tabs" role="group" aria-label="Filter articles by category" style={{ display: 'flex', marginBottom: 0 }}>
+                    {tabs.map((t) => (
+                      <button key={t} type="button" className="ds-tab" aria-pressed={tab === t} onClick={() => setTab(t)}>
+                        {t}
+                      </button>
+                    ))}
                   </div>
-                );
-              })
-            ) : (
-              <div className="col-12 text-center py-5">
-                <h4 className="text-muted">No blog posts found.</h4>
-                <p className="text-secondary">
-                  We couldn't find any blog posts at the moment.
-                </p>
+                )}
               </div>
-            )}
-          </div>
-        )}
 
-        {!loading && posts.length > 0 && (
-          <nav aria-label="Page navigation example">
-            <ul className="pagination justify-content-center">
-              <li className="page-item disabled">
-                <span className="page-link">Previous</span>
-              </li>
-              <li className="page-item active">
-                <span className="page-link">1</span>
-              </li>
-              <li className="page-item disabled">
-                <span className="page-link">Next</span>
-              </li>
-            </ul>
-          </nav>
-        )}
-      </div>
+              <p className="ds-results-meta" aria-live="polite">
+                {filtered.length} {filtered.length === 1 ? 'article' : 'articles'}
+                {query.trim() ? ` matching “${query.trim()}”` : ''}
+              </p>
+
+              {featured && (
+                <article className="ds-card ds-card--hover ds-article ds-article--featured">
+                  <div className="ds-article__img">
+                    <PostImage post={featured} sizes="(min-width: 992px) 640px, 92vw" priority />
+                    {featured.category && <span className="ds-chip">{featured.category}</span>}
+                  </div>
+                  <div className="ds-article__body">
+                    <span className="ds-eyebrow" style={{ marginBottom: 0 }}>Latest article</span>
+                    <h2>
+                      <Link href={`/blogs/${normalizeSlug(featured.slug)}`}>{featured.title}</Link>
+                    </h2>
+                    <p>{excerptOf(featured)}</p>
+                    <Meta post={featured} />
+                    <span className="ds-link" aria-hidden="true">
+                      Read article <LuArrowRight />
+                    </span>
+                  </div>
+                </article>
+              )}
+
+              {rest.length > 0 ? (
+                <ul className="ds-grid ds-grid--3">
+                  {rest.map((post, i) => (
+                    <li key={post._id || post.slug}>
+                      <article className="ds-card ds-card--hover ds-article">
+                        <div className="ds-article__img">
+                          <PostImage
+                            post={post}
+                            sizes="(min-width: 992px) 380px, (min-width: 640px) 45vw, 92vw"
+                            priority={!showFeatured && i < 3}
+                          />
+                          {post.category && <span className="ds-chip">{post.category}</span>}
+                        </div>
+                        <div className="ds-article__body">
+                          <Meta post={post} />
+                          <h3>
+                            <Link href={`/blogs/${normalizeSlug(post.slug)}`}>{post.title}</Link>
+                          </h3>
+                          <p>{excerptOf(post)}</p>
+                          <span className="ds-link ds-article__more" aria-hidden="true">
+                            Read more <LuArrowRight />
+                          </span>
+                        </div>
+                      </article>
+                    </li>
+                  ))}
+                </ul>
+              ) : !featured ? (
+                <div className="ds-empty">
+                  No articles match your search.{' '}
+                  <button
+                    type="button"
+                    className="ds-link"
+                    style={{ background: 'none', border: 0, padding: 0 }}
+                    onClick={() => { setQuery(''); setTab('All'); }}
+                  >
+                    Clear filters
+                  </button>
+                </div>
+              ) : null}
+
+              {remaining > 0 && (
+                <div className="ds-center-cta">
+                  <button type="button" className="ds-btn ds-btn--ghost" onClick={() => setVisibleCount((n) => n + PAGE_SIZE)}>
+                    Load more articles ({remaining})
+                  </button>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      </section>
     </>
   );
 }

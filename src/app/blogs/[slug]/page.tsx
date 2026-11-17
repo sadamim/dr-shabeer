@@ -1,5 +1,6 @@
 // src/app/blogs/[slug]/page.tsx
 import { notFound } from 'next/navigation';
+import { linkTocHeadings } from '@/lib/utils/linkTocHeadings';
 import { getPostBySlug } from '@/lib/getPostBySlug';
 import { Metadata } from 'next';
 import BariatricBanner from '@/components/BreadcrumbBanner';
@@ -91,7 +92,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
                     <p className="text-sm text-gray-500 mt-2">
                         {new Date(post.date).toLocaleDateString()}
                     </p>
-                    <div className='mt-4' dangerouslySetInnerHTML={{ __html: post.content || '' }} />
+                    <div className='mt-4 ds-blog-content' dangerouslySetInnerHTML={{ __html: linkTocHeadings(post.content || '') }} />
                 </div>
             </>
 
