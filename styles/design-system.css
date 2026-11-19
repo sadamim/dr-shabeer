@@ -2847,6 +2847,12 @@ a:focus:not(:focus-visible) {
   text-decoration-color: var(--ds-accent);
 }
 
+/* Bold text inside a link (<a><strong>…</strong></a>) keeps the link colour */
+.ds-main .container .ds-blog-content a strong,
+.ds-main .container .ds-blog-content a b {
+  color: inherit;
+}
+
 .ds-main .ds-blog-content .toc {
   padding: 1.25rem 1.5rem;
   border: 1px solid var(--ds-border);
